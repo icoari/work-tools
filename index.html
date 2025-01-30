@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Work Tools</title>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body class="theme-light">  <!-- Par défaut on met la classe "theme-light" -->
+  <div id="animated-glow">
+    <div class="glow" style="top: 10%; left: 20%;"></div>
+    <div class="glow" style="top: 50%; left: 70%; animation-delay: 3s;"></div>
+    <div class="glow" style="top: 80%; left: 30%; animation-delay: 5s;"></div>
+  </div>
+  
+  <!-- Animated Background (Bubbles) -->
+  <canvas id="bubbly-bg"></canvas>
+
+  <div class="container">
+    <!-- Main Visualization Section -->
+    <main class="main-section">
+      <!-- Meditation -->
+      <section class="meditation-section" id="meditation-section">
+        <div class="meditation-container">
+          <!-- Breathing Circle -->
+          <div id="breathe-circle">
+            <div class="circle-inner">
+              <div id="phase-text" data-i18n="prepare">Préparez-vous</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pomodoro -->
+      <section class="pomodoro-section hidden" id="pomodoro-section">
+        <div class="pomodoro-container">
+          <div id="pomodoro-circle">
+            <div class="circle-inner">
+              <div id="pomodoro-timer">25:00</div>
+              <div id="pomodoro-step-label" data-i18n="workLabel">Travail</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tasks -->
+      <section class="tasks-section hidden" id="tasks-section">
+        <div class="tasks-container">
+          <h1 class="tasks-title" data-i18n="taskListTitle">Task List</h1>
+          <ul id="tasks-list"></ul>
+        </div>
+      </section>
+
+      <!-- Statistics -->
+      <section class="stats-section hidden" id="stats-section">
+        <div class="stats-container">
+          <h1 class="stats-heading" data-i18n="globalStatsTitle">Global Statistics</h1>
+          <div class="stats-global-row">
+            <div class="stat-card">
+              <h2 data-i18n="pomodoroSessions">Pomodoro Sessions</h2>
+              <p class="stat-number" id="stats-pomodoro-sessions">0</p>
+            </div>
+            <div class="stat-card">
+              <h2 data-i18n="completedTasks">Completed Tasks</h2>
+              <p class="stat-number" id="stats-tasks-completed">0</p>
+            </div>
+            <div class="stat-card">
+              <h2 data-i18n="completedMeditations">Completed Meditations</h2>
+              <p class="stat-number" id="stats-meditation-sessions">0</p>
+            </div>
+          </div>
+
+          <h1 class="stats-heading" data-i18n="statsByPeriod">Statistics by Period</h1>
+          <div class="stats-global-row">
+            <div class="stat-card">
+              <h2 data-i18n="today">Today</h2>
+              <p>
+                <span data-i18n="pomodoroShort">Pomodoro</span> 
+                <span class="stat-number" id="stats-pomodoro-today">0</span>
+              </p>
+              <p>
+                <span data-i18n="tasksShort">Tasks</span> 
+                <span class="stat-number" id="stats-tasks-today">0</span>
+              </p>
+              <p>
+                <span data-i18n="meditationShort">Meditation</span> 
+                <span class="stat-number" id="stats-meditation-today">0</span>
+              </p>
+            </div>
+            <div class="stat-card">
+              <h2 data-i18n="thisWeek">This Week</h2>
+              <p>
+                <span data-i18n="pomodoroShort">Pomodoro</span> 
+                <span class="stat-number" id="stats-pomodoro-week">0</span>
+              </p>
+              <p>
+                <span data-i18n="tasksShort">Tasks</span> 
+                <span class="stat-number" id="stats-tasks-week">0</span>
+              </p>
+              <p>
+                <span data-i18n="meditationShort">Meditation</span>
+                <span class="stat-number" id="stats-meditation-week">0</span>
+              </p>
+            </div>
+            <div class="stat-card">
+              <h2 data-i18n="thisMonth">This Month</h2>
+              <p>
+                <span data-i18n="pomodoroShort">Pomodoro</span> 
+                <span class="stat-number" id="stats-pomodoro-month">0</span>
+              </p>
+              <p>
+                <span data-i18n="tasksShort">Tasks</span> 
+                <span class="stat-number" id="stats-tasks-month">0</span>
+              </p>
+              <p>
+                <span data-i18n="meditationShort">Meditation</span> 
+                <span class="stat-number" id="stats-meditation-month">0</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Sidebar (Settings) -->
+    <aside class="sidebar">
+      <nav class="tabs">
+        <button class="tab-button active" data-tab="meditation">
+          <i class="fas fa-spa"></i>
+          <span data-i18n="meditationTab">Meditation</span>
+        </button>
+        <button class="tab-button" data-tab="pomodoro">
+          <i class="fas fa-clock"></i>
+          <span data-i18n="pomodoroTab">Pomodoro</span>
+        </button>
+        <button class="tab-button" data-tab="tasks">
+          <i class="fas fa-clipboard-list"></i>
+          <span data-i18n="tasksTab">Tasks</span>
+        </button>
+        <button class="tab-button" data-tab="stats">
+          <i class="fas fa-chart-pie"></i>
+          <span data-i18n="statisticsTab">Statistics</span>
+        </button>            
+      </nav>
+
+      <!-- Meditation Settings -->
+      <div class="settings" id="meditation-settings">
+        <h2 data-i18n="meditationSettings">Meditation Settings</h2>
+        <div class="setting-group">
+          <label for="inhale-time" data-i18n="inhaleLabel">Inhale (seconds)</label>
+          <input type="range" id="inhale-time" min="1" max="10" value="4" />
+          <span id="inhale-value">4</span>
+        </div>
+        <div class="setting-group">
+          <label for="hold-time" data-i18n="holdLabel">Hold (seconds)</label>
+          <input type="range" id="hold-time" min="0" max="10" value="7" />
+          <span id="hold-value">7</span>
+        </div>
+        <div class="setting-group">
+          <label for="exhale-time" data-i18n="exhaleLabel">Exhale (seconds)</label>
+          <input type="range" id="exhale-time" min="1" max="10" value="8" />
+          <span id="exhale-value">8</span>
+        </div>
+        <div class="setting-group">
+          <label for="cycles-count" data-i18n="numBreaths">Number of Breaths</label>
+          <input type="range" id="cycles-count" min="1" max="25" value="10" />
+          <span id="cycles-value">10</span>
+        </div>
+
+        <div class="sound-selectors">
+          <h2 data-i18n="selectSounds">Select Sounds</h2>
+          <div class="sound-group">
+            <label for="background-sound" data-i18n="backgroundSound">Background Sound</label>
+            <select id="background-sound">
+              <option value="none" selected data-i18n="noSound">No sound</option>
+              <option value="background1.mp3" data-i18n="ocean">Ocean</option>
+              <option value="background2.mp3" data-i18n="rain">Rain</option>
+              <option value="background3.mp3" data-i18n="forest1">Forest 1</option>
+              <option value="background4.mp3" data-i18n="forest2">Forest 2</option>
+              <option value="background5.mp3" data-i18n="countryside">Countryside</option>
+            </select>
+          </div>
+          <div class="sound-group">
+            <label for="breathe-sound" data-i18n="stepSound">Step Sound</label>
+            <select id="breathe-sound">
+              <option value="none" selected data-i18n="noSound">No sound</option>
+              <option value="breathe1.mp3" data-i18n="tibetanBowl">Tibetan Bowl</option>
+              <option value="breathe2.mp3" data-i18n="bell">Bell</option>
+              <option value="toc.mp3" data-i18n="toc">Toc</option>
+              <option value="tic.mp3" data-i18n="tic">Tic</option>
+              <option value="Pwiut.mp3" data-i18n="pwiut">Pwiut</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pomodoro Settings -->
+      <div class="settings hidden" id="pomodoro-settings">
+        <h2 data-i18n="pomodoroSettings">Pomodoro Settings</h2>
+        <div class="setting-group">
+          <label for="work-duration" data-i18n="workDuration">Work Duration (minutes)</label>
+          <input type="range" id="work-duration" min="15" max="60" step="5" value="25" />
+          <span id="work-value">25</span>
+        </div>
+        <div class="setting-group">
+          <label for="short-break" data-i18n="shortBreak">Short Break (minutes)</label>
+          <input type="range" id="short-break" min="1" max="15" step="1" value="5" />
+          <span id="short-break-value">5</span>
+        </div>
+        <div class="setting-group">
+          <label for="long-break" data-i18n="longBreak">Long Break (minutes)</label>
+          <input type="range" id="long-break" min="5" max="30" step="5" value="15" />
+          <span id="long-break-value">15</span>
+        </div>
+        <div class="setting-group">
+          <label for="sessions" data-i18n="sessionsBeforeLong">Sessions Before Long Break</label>
+          <input type="range" id="sessions" min="1" max="8" step="1" value="4" />
+          <span id="sessions-value">4</span>
+        </div>
+
+        <h2 data-i18n="selectSounds">Select Sounds</h2>
+        <div class="sound-group">
+          <label for="pomodoro-background-sound" data-i18n="backgroundSound">Background Sound</label>
+          <select id="pomodoro-background-sound">
+            <option value="none" selected data-i18n="noSound">No sound</option>
+            <option value="background1.mp3" data-i18n="ocean">Ocean</option>
+            <option value="background2.mp3" data-i18n="rain">Rain</option>
+            <option value="background3.mp3" data-i18n="forest1">Forest 1</option>
+            <option value="background4.mp3" data-i18n="forest2">Forest 2</option>
+            <option value="background5.mp3" data-i18n="countryside">Countryside</option>
+          </select>
+        </div>
+        <div class="sound-group">
+          <label for="pomodoro-end-sound" data-i18n="endSound">End Sound</label>
+          <select id="pomodoro-end-sound">
+            <option value="none" selected data-i18n="noSound">No sound</option>
+            <option value="toc.mp3" data-i18n="toc">Toc</option>
+            <option value="tic.mp3" data-i18n="tic">Tic</option>
+            <option value="Pwiut.mp3" data-i18n="pwiut">Pwiut</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Task Settings -->
+      <div class="settings hidden" id="tasks-settings">
+        <h2 data-i18n="taskSettings">Task Settings</h2>
+        <div class="setting-group">
+          <label for="task-text" data-i18n="createNewTask">Create a New Task</label>
+          <input type="text" id="task-text" placeholder="New task..." data-i18n-placeholder="taskPlaceholder" />
+        </div>
+        <label data-i18n="colorLabel">Color</label>
+        <div class="color-palette" id="task-color-palette">
+          <div class="color-dot selected" data-color="#FFE0B2" style="background-color: #FFE0B2;"></div>
+          <div class="color-dot" data-color="#C8E6C9" style="background-color: #C8E6C9;"></div>
+          <div class="color-dot" data-color="#BBDEFB" style="background-color: #BBDEFB;"></div>
+          <div class="color-dot" data-color="#E1BEE7" style="background-color: #E1BEE7;"></div>
+          <div class="color-dot" data-color="#FFCCBC" style="background-color: #FFCCBC;"></div>
+          <div class="color-dot" data-color="#D7CCC8" style="background-color: #D7CCC8;"></div>
+        </div>
+        <button id="add-task-btn" class="btn" data-i18n="addTaskBtn">Add</button>
+
+        <h2 data-i18n="manageTasks">Manage Tasks</h2>
+        <div class="tasks-manage">
+          <button id="clear-all-tasks-btn" class="btn btn-block" data-i18n="clearAllTasks">Clear All Tasks</button>
+          <button id="clear-completed-tasks-btn" class="btn btn-block" data-i18n="clearCompletedTasks">Clear Completed Tasks</button>
+          <button id="undo-btn" class="btn btn-block" data-i18n="undoLastAction">Undo Last Action</button>
+        </div>
+      </div>
+
+      <!-- Statistics Settings -->
+      <div class="settings hidden" id="stats-settings">
+        <h2 data-i18n="appSettings">App Settings</h2>
+        
+        <!-- Reset Stats -->
+        <div class="setting-group toggle-container">
+          <span data-i18n="resetStats">Reset Stats</span>
+          <div class="reset-container">
+            <button id="reset-stats-btn" class="reset-btn" title="Reset Stats"><i class="fas fa-redo"></i></button>
+          </div>
+        </div>
+
+        <!-- Theme Selection -->
+        <div class="setting-group toggle-container">
+          <span data-i18n="themeLabel">Theme</span>
+          <div class="theme-container">
+            <button class="theme-btn" data-theme="light" title="Light Theme">
+              <i class="fas fa-sun"></i>
+            </button>
+            <button class="theme-btn" data-theme="dark" title="Dark Theme">
+              <i class="fas fa-moon"></i>
+            </button>
+            <button class="theme-btn" data-theme="nature" title="Nature Theme">
+              <i class="fas fa-leaf"></i>
+            </button>
+            <button class="theme-btn" data-theme="abstract" title="Abstract Theme">
+              <i class="fas fa-palette"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Language Selection -->
+        <div class="setting-group toggle-container">
+          <span data-i18n="languageLabel">Language</span>
+          <div class="language-container">
+            <button class="lang-btn" data-lang="fr" title="Français">🇫🇷</button>
+            <button class="lang-btn" data-lang="en" title="English">🇬🇧</button>
+            <button class="lang-btn" data-lang="es" title="Español">🇪🇸</button>
+            <button class="lang-btn" data-lang="de" title="Deutsch">🇩🇪</button>
+          </div>
+        </div>
+        
+        <!-- GitHub Link -->
+        <div class="setting-group toggle-container">
+          <span>GitHub</span>
+          <a href="https://github.com/icoari" target="_blank" class="github-btn">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Meditation Controls -->
+      <div class="controls" id="meditation-controls">
+        <button id="start-meditation-btn" class="btn" data-i18n="startBtn">Start</button>
+        <button id="reset-meditation-btn" class="btn" data-i18n="resetBtn">Reset</button>
+      </div>
+
+      <!-- Pomodoro Controls -->
+      <div class="controls hidden" id="pomodoro-controls">
+        <button id="pomodoro-start-btn" class="btn" data-i18n="startBtn">Start</button>
+        <button id="pomodoro-reset-btn" class="btn" data-i18n="resetBtn">Reset</button>
+      </div>
+
+      <!-- Task Controls -->
+      <div class="controls hidden" id="tasks-controls"></div>
+
+      <!-- Statistics Controls -->
+      <div class="controls hidden" id="stats-controls"></div>
+    </aside>
+  </div>
+
+  <!-- Audio Elements -->
+  <audio id="background-audio" loop></audio>
+  <audio id="breathe-audio"></audio>
+  <audio id="pomodoro-background-audio" loop></audio>
+  <audio id="pomodoro-end-audio"></audio>
+
+  <!-- Bubbly Background Script -->
+  <script src="https://unpkg.com/bubbly-bg"></script>
+
+  <!-- Main Script -->
+  <script src="script.js"></script>
+</body>
+</html>
