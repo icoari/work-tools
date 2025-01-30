@@ -1165,4 +1165,75 @@ function init() {
   updateMeditationDynamicTexts();
 }
 
+function updateThemeColor(theme) {
+  let color;
+  switch (theme) {
+    case 'dark':
+      color = '#121212';
+      break;
+    case 'nature':
+      color = '#56ab2f';
+      break;
+    case 'abstract':
+      color = '#ff8673';
+      break;
+    default:
+      color = '#009688';
+  }
+  document.querySelector('meta[name="theme-color"]').setAttribute('content', color);
+}
+
+document.querySelectorAll('.theme-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const theme = btn.getAttribute('data-theme');
+    updateThemeColor(theme);
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  updateThemeColor(localStorage.getItem('appTheme') || 'light');
+});
+
 document.addEventListener('DOMContentLoaded', init);
+
+let wakeLock = null;
+
+async function requestWakeLock() {
+  if ('wakeLock' in navigator) {
+    try {
+      wakeLock = await navigator.wakeLock.request('screen');
+      wakeLock.addEventListener('release', () => {
+        console.log('Wake Lock released');
+      });
+    } catch (err) {
+      console.error(`Wake Lock error: ${err.name}, ${err.message}`);
+    }
+  }
+}
+
+function releaseWakeLock() {
+  if (wakeLock) {
+    wakeLock.release();
+    wakeLock = null;
+  }
+}
+
+// Activer le Wake Lock quand une activité démarre
+document.getElementById('start-meditation-btn').addEventListener('click', () => {
+  if (!medIsRunning) {
+    requestWakeLock();
+  } else {
+    releaseWakeLock();
+  }
+});
+
+document.getElementById('pomodoro-start-btn').addEventListener('click', () => {
+  if (!pomodoroRunning) {
+    requestWakeLock();
+  } else {
+    releaseWakeLock();
+  }
+});
+
+document.getElementById('reset-meditation-btn').addEventListener('click', releaseWakeLock);
+document.getElementById('pomodoro-reset-btn').addEventListener('click', releaseWakeLock);

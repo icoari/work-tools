@@ -795,6 +795,26 @@ input:checked + .slider:before {
   border-left: 2px solid #03DAC6;
 }
 
+.theme-dark select {
+  background: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.theme-dark select:focus {
+  border-color: #03DAC6;
+  outline: none;
+}
+
+.theme-dark select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg width='12' height='12' viewBox='0 0 24 24' fill='%23fff' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+  padding-right: 30px;
+}
+
 /* Titles, Texts, Tabs */
 .theme-dark h2,
 .theme-dark label,
