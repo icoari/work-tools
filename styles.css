@@ -24,9 +24,9 @@
 body {
   background: linear-gradient(135deg, #f5f5f5, #e0f7fa);
   background-size: cover;
-  overflow: hidden;
-  height: 100vh;
-  width: 100vw;
+  overflow-x: hidden; 
+  min-height: 100vh;
+  width: 100%;
   position: relative;
   font-family: 'Inter', sans-serif;
 }
