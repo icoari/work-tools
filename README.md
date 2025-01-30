@@ -1,7 +1,3 @@
-Voici une version en anglais qui met en avant ton objectif d'apprentissage en **JavaScript** et en **UI design** :  
-
----
-
 # 🚀 Work Tools - A Productivity & Focus Companion  
 
 > **🛠️ Project 01 - Work Tools is a personal learning journey** to improve my **JavaScript** skills and gain experience in **UI design** for future projects. By building Work Tools, I aim to deepen my understanding of interactive web applications and frontend development.  
