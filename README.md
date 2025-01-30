@@ -1,14 +1,14 @@
-![image](https://github.com/user-attachments/assets/e423d2e0-3813-4ba8-aaaf-cffed4859002)# 🚀 Work Tools - A Productivity & Focus Companion  
+# 🚀 Work Tools - A Productivity & Focus Companion  
 
 > **🛠️ Project 01 - Work Tools is a personal learning journey** to improve my **JavaScript** skills and gain experience in **UI design** for future projects. By building Work Tools, I aim to deepen my understanding of interactive web applications and frontend development.  
 
-**Work Tools** is a simple yet powerful web application designed to help you **stay focused, manage time, and enhance well-being**. Whether you want to **meditate, use the Pomodoro technique, track your tasks, or analyze your progress**, this tool provides a seamless and engaging experience. 🌿⏳  
+**Work Tools** is a simple web application designed to help you **stay focused, manage time, and enhance well-being**. Whether you want to **meditate, use the Pomodoro technique, track your tasks, or analyze your progress**, this tool provides a seamless and engaging experience. 🌿⏳  
 
 ### 🌟 Features  
 🔹 **Meditation** - Guided breathing exercises with customizable sounds.  
 🔹 **Pomodoro Timer** - Optimize your workflow with structured work/rest cycles.  
 🔹 **Task Manager** - Organize your tasks with colors, drag & drop, and quick edits.  
-🔹 **Statistics** - Track your productivity and progress over time.  
+🔹 **Statistics** - Track your productivity and progress over time & change app settings.
 
 ✨ **Bonus**  
 ✔️ Modern, interactive UI with animations 🎨  
