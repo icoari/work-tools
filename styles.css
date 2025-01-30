@@ -20,7 +20,7 @@
   100% { transform: translate(-30%, -30%) scale(1); }
 }
 
-/* BODY (thème clair par défaut) */
+/* Body (light theme by default) */
 body {
   background: linear-gradient(135deg, #f5f5f5, #e0f7fa);
   background-size: cover;
@@ -180,7 +180,7 @@ input[type='text'] {
 
 select {
   width: 100%;
-  padding: 10px; /* Increased padding for better text visibility */
+  padding: 10px;
   border: none;
   border-radius: 8px;
   background: #b2ebf2;
@@ -772,33 +772,30 @@ input:checked + .slider:before {
 
 /* ====================================================
    THEME SUPPLEMENTS (DARK, NATURE, ABSTRACT)
-   On applique une classe .theme-XXX sur <body>
-   ====================================================*/
+   Apply a .theme-XXX class to <body>
+====================================================*/
 
 /* ===============================
-   1) Thème clair (défaut)
-   ===============================*/
-.theme-light {
-  /* On laisse le style existant en base */
-}
-
-/* ===============================
-   2) Thème sombre
-   ===============================*/
+   1) Dark Mode
+   ==============================*/
 .theme-dark {
-  background: linear-gradient(135deg, #1a1a1a, #333);
+  /* Main Background */
+  background: #121212;
 }
 
+/* Main Container */
 .theme-dark .container {
-  background: rgba(0, 0, 0, 0.6);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+  background: #1e1e1e;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.85);
 }
 
+/* Sidebar */
 .theme-dark .sidebar {
-  background: rgba(30, 30, 30, 0.9);
-  border-left: 2px solid #444;
+  background: #1c1c1c;
+  border-left: 2px solid #03DAC6;
 }
 
+/* Titles, Texts, Tabs */
 .theme-dark h2,
 .theme-dark label,
 .theme-dark span,
@@ -806,209 +803,450 @@ input:checked + .slider:before {
 .theme-dark .stat-card h2,
 .theme-dark .tasks-title,
 .theme-dark .stats-heading {
-  color: #f0f0f0;
+  color: #e0e0e0;
 }
 
 .theme-dark .tab-button:hover,
 .theme-dark .tab-button.active {
-  background: #444;
-  color: #fff;
+  background: #03DAC6;
+  color: #000;
+  border-radius: 8px;
 }
 
+/* General Buttons */
 .theme-dark .btn {
-  background: #666;
-  color: #f0f0f0;
-}
-.theme-dark .btn:hover {
-  background: #555;
-}
-.theme-dark .reset-btn {
-  border: 2px solid #666;
-  color: #f0f0f0;
-}
-.theme-dark .reset-btn:hover {
-  background: #666;
-  color: #fff;
+  background: #03DAC6;
+  color: #000;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
 }
 
+.theme-dark .btn:hover {
+  background: #00c2ac;
+  transform: translateY(-2px);
+}
+
+/* Reset Button */
+.theme-dark .reset-btn {
+  border: 2px solid #03DAC6;
+  color: #03DAC6;
+  background: transparent;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+.theme-dark .reset-btn:hover {
+  background: #03DAC6;
+  color: #000;
+  transform: scale(1.1);
+}
+
+/* Tasks */
 .theme-dark .task-item {
-  background: #3a3a3a;
-  border-left: 5px solid #777;
-  color: #ccc;
+  background: #2a2a2a;
+  border-left: 5px solid #03DAC6;
+  color: #cccccc;
 }
+
 .theme-dark .task-item.completed {
-  background: #666;
-  color: #999;
+  background: #3b3b3b;
+  color: #888888;
 }
+
+/* Trash Icon */
 .theme-dark .trash-btn {
-  color: #ccc;
+  color: #999999;
 }
 .theme-dark .trash-btn:hover {
-  color: #ff5555;
+  color: #f44336;
 }
 
+/* Statistics Cards */
 .theme-dark .stat-card {
   background: #2a2a2a;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 .theme-dark .stat-number {
-  color: #42c8be;
+  color: #03DAC6;
 }
 
+/* Texts in Meditation/Pomodoro Circles */
 .theme-dark #phase-text,
 .theme-dark #pomodoro-timer,
 .theme-dark #pomodoro-step-label {
   color: #f0f0f0;
 }
 
+/* Theme, Language Containers */
+.theme-dark .toggle-container,
+.theme-dark .theme-container,
+.theme-dark .language-container {
+  background: #1e1e1e;
+  border-radius: 8px;
+}
+
+/* Theme Buttons */
+.theme-dark .theme-btn {
+  border: 2px solid #03DAC6;
+  color: #03DAC6;
+  background: transparent;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+.theme-dark .theme-btn:hover {
+  background: #03DAC6;
+  color: #000;
+  transform: scale(1.05);
+}
+.theme-dark .theme-btn.active {
+  background: #03DAC6;
+  color: #000;
+}
+
+/* Language Buttons */
+.theme-dark .lang-btn {
+  border: 2px solid #03DAC6;
+  color: #03DAC6;
+  background: transparent;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+.theme-dark .lang-btn:hover {
+  background: #03DAC6;
+  color: #000;
+  transform: scale(1.05);
+}
+.theme-dark .lang-btn.active {
+  background: #03DAC6;
+  color: #000;
+}
+
+/* GitHub Button */
+.theme-dark .github-btn {
+  border: 2px solid #03DAC6;
+  color: #03DAC6;
+  background: transparent;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+.theme-dark .github-btn:hover {
+  background: #03DAC6;
+  color: #000;
+  transform: scale(1.05);
+}
+
 /* ===============================
-   3) Thème nature
-   ===============================*/
+   2) Nature Theme
+   ==============================*/
 .theme-nature {
-  background: linear-gradient(135deg, #a2e05e, #57c84d);
+  background: linear-gradient(135deg, #a8e063, #56ab2f);
 }
 
 .theme-nature .container {
   background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
 }
 
 .theme-nature .sidebar {
   background: rgba(255, 255, 255, 0.9);
-  border-left: 2px solid #76b852;
-}
-
-.theme-nature .tab-button.active,
-.theme-nature .tab-button:hover {
-  background: #76b852;
-  color: white;
-}
-
-.theme-nature .btn {
-  background: #76b852;
-}
-.theme-nature .btn:hover {
-  background: #65a443;
-}
-
-.theme-nature .reset-btn {
-  border-color: #76b852;
-}
-.theme-nature .reset-btn:hover {
-  background: #76b852;
-  color: white;
+  border-left: 2px solid #56ab2f;
 }
 
 .theme-nature h2,
 .theme-nature label,
 .theme-nature span,
+.theme-nature .tab-button,
+.theme-nature .stat-card h2,
 .theme-nature .tasks-title,
-.theme-nature .stats-heading,
-.theme-nature .stat-card h2 {
-  color: #2f4f1c; /* Un vert sombre */
+.theme-nature .stats-heading {
+  color: #2f4f1c;
 }
 
+.theme-nature .tab-button:hover,
+.theme-nature .tab-button.active {
+  background: #56ab2f;
+  color: #fff;
+}
+
+.theme-nature .btn {
+  background: #56ab2f;
+  color: #fff;
+}
+.theme-nature .btn:hover {
+  background: #3a8b1f;
+}
+
+/* Reset Button */
+.theme-nature .reset-btn {
+  border: 2px solid #56ab2f;
+  color: #2f4f1c;
+}
+.theme-nature .reset-btn:hover {
+  background: #56ab2f;
+  color: #fff;
+}
+
+/* Tasks */
 .theme-nature .task-item {
   background: #f1ffe3;
   border-left: 5px solid #76b852;
+  color: #2f4f1c;
 }
 .theme-nature .task-item.completed {
   background: #dce9d0;
+  color: #2f4f1c;
 }
 
+/* Trash Icon */
+.theme-nature .trash-btn {
+  color: #2f4f1c;
+}
+.theme-nature .trash-btn:hover {
+  color: #ff4444;
+}
+
+/* Statistics Cards */
 .theme-nature .stat-card {
   background: #f1ffe3;
 }
 .theme-nature .stat-number {
-  color: #76b852;
+  color: #56ab2f;
 }
 
+/* Texts in Meditation/Pomodoro Circles */
 .theme-nature #phase-text,
 .theme-nature #pomodoro-timer,
 .theme-nature #pomodoro-step-label {
   color: #2f4f1c;
 }
 
-/* ===============================
-   4) Thème abstrait (coloré)
-   ===============================*/
-.theme-abstract {
-  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4);
-  background-size: 400% 400%;
-  animation: gradientBG 15s ease infinite;
-}
-
-@keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-.theme-abstract .container {
-  background: rgba(255, 255, 255, 0.7);
-}
-
-.theme-abstract .sidebar {
+/* Theme, Language Containers */
+.theme-nature .theme-container,
+.theme-nature .language-container,
+.theme-nature .toggle-container {
   background: rgba(255, 255, 255, 0.8);
-  border-left: 2px solid #ff9a9e;
 }
 
-.theme-abstract .tab-button.active,
-.theme-abstract .tab-button:hover {
-  background: #fd6c6c;
+/* Theme Buttons */
+.theme-nature .theme-btn {
+  background: transparent;
+  border: 2px solid #56ab2f;
+  color: #2f4f1c;
+  transition: all 0.3s ease;
+}
+.theme-nature .theme-btn:hover {
+  background: #56ab2f;
+  color: #fff;
+}
+.theme-nature .theme-btn.active {
+  background: #56ab2f;
   color: #fff;
 }
 
+/* Language Buttons */
+.theme-nature .lang-btn {
+  background: transparent;
+  border: 2px solid #56ab2f;
+  color: #2f4f1c;
+  transition: all 0.3s ease;
+}
+.theme-nature .lang-btn:hover {
+  background: #56ab2f;
+  color: #fff;
+}
+.theme-nature .lang-btn.active {
+  background: #56ab2f;
+  color: #fff;
+}
+
+/* GitHub Button */
+.theme-nature .github-btn {
+  background: transparent;
+  border: 2px solid #56ab2f;
+  color: #2f4f1c;
+  transition: all 0.3s ease;
+}
+.theme-nature .github-btn:hover {
+  background: #56ab2f;
+  color: #fff;
+}
+
+/* ===============================
+   3) Abstract Theme (Retro Vintage)
+   More Colorful & Vibrant
+   ==============================*/
+.theme-abstract {
+  /* Large multi-color gradient with retro and dynamic effect */
+  background: linear-gradient(
+    135deg,
+    #f6d365,
+    #fda085,
+    #ff9a9e,
+    #fad0c4,
+    #fad0c4
+  );
+  background-size: 300% 300%;
+  animation: vintageBG 12s ease-in-out infinite;
+}
+
+/* Animation for gradient scrolling effect */
+@keyframes vintageBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Main Container */
+.theme-abstract .container {
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 12px 40px rgba(255, 140, 100, 0.4);
+}
+
+/* Sidebar */
+.theme-abstract .sidebar {
+  background: rgba(255, 255, 255, 0.9);
+  border-left: 2px solid #ff8673;
+}
+
+/* Titles, Texts, Tabs, etc. */
 .theme-abstract h2,
 .theme-abstract label,
 .theme-abstract span,
-.theme-abstract .tasks-title,
-.theme-abstract .stats-heading,
+.theme-abstract .tab-button,
 .theme-abstract .stat-card h2,
-.theme-abstract .tab-button {
-  color: #652121; 
+.theme-abstract .tasks-title,
+.theme-abstract .stats-heading {
+  color: #70323f;
+  text-shadow: 0 0 1px rgba(112, 50, 63, 0.3);
 }
 
-.theme-abstract .btn {
-  background: #fd6c6c;
-}
-.theme-abstract .btn:hover {
-  background: #ff4c4c;
-}
-
-.theme-abstract .reset-btn {
-  border-color: #fd6c6c;
-  color: #652121;
-}
-.theme-abstract .reset-btn:hover {
-  background: #fd6c6c;
+/* Tabs */
+.theme-abstract .tab-button:hover,
+.theme-abstract .tab-button.active {
+  background: #ff8673;
   color: #fff;
 }
 
+/* General Buttons */
+.theme-abstract .btn {
+  background: #ff8673; 
+  color: #fff;
+  box-shadow: 0 2px 5px rgba(255, 140, 100, 0.2);
+  transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+}
+.theme-abstract .btn:hover {
+  background: #ff705c;
+  box-shadow: 0 3px 8px rgba(255, 140, 100, 0.3);
+  transform: translateY(-2px);
+}
+.theme-abstract .btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(255, 140, 100, 0.3);
+}
+
+/* Reset Button */
+.theme-abstract .reset-btn {
+  border: 2px solid #ff8673;
+  background: transparent;
+  color: #ff8673;
+  transition: all 0.3s ease;
+}
+.theme-abstract .reset-btn:hover {
+  background: #ff8673;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Tasks */
 .theme-abstract .task-item {
-  background: #ffe2e2;
-  border-left: 5px solid #fd6c6c;
-  color: #652121;
+  background: #fff1eb;
+  border-left: 5px solid #ff8673;
+  color: #70323f;
+  text-shadow: 0 0 1px rgba(112, 50, 63, 0.2);
 }
 .theme-abstract .task-item.completed {
-  background: #ffdcdc;
-  color: #984545;
+  background: #ffe1d9;
+  color: #90535f;
 }
 
+/* Trash Icon */
 .theme-abstract .trash-btn {
-  color: #984545;
+  color: #bf6a80;
 }
 .theme-abstract .trash-btn:hover {
-  color: #ff4444;
+  color: #ff5240;
 }
 
+/* Statistics Cards */
 .theme-abstract .stat-card {
-  background: #ffe2e2;
+  background: #fff1eb;
+  box-shadow: 0 2px 6px rgba(255, 140, 100, 0.2);
 }
 .theme-abstract .stat-number {
-  color: #fd6c6c;
+  color: #fd7f8f;
+  text-shadow: 0 0 1px #fff;
 }
 
+/* Texts in Meditation/Pomodoro Circles */
 .theme-abstract #phase-text,
 .theme-abstract #pomodoro-timer,
 .theme-abstract #pomodoro-step-label {
-  color: #652121;
+  color: #b55b4f;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.6);
+}
+
+/* Theme, Language Containers */
+.theme-abstract .theme-container,
+.theme-abstract .language-container,
+.theme-abstract .toggle-container {
+  background: rgba(255, 241, 235, 0.7);
+  border-radius: 8px;
+}
+
+/* Theme Buttons */
+.theme-abstract .theme-btn {
+  border: 2px solid #ff8673;
+  background: transparent;
+  color: #ff8673;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+.theme-abstract .theme-btn:hover {
+  background: #ff8673;
+  color: #fff;
+  transform: scale(1.05);
+}
+.theme-abstract .theme-btn.active {
+  background: #ff8673;
+  color: #fff;
+}
+
+/* Language Buttons */
+.theme-abstract .lang-btn {
+  border: 2px solid #ff8673;
+  background: transparent;
+  color: #ff8673;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+.theme-abstract .lang-btn:hover {
+  background: #ff8673;
+  color: #fff;
+  transform: scale(1.05);
+}
+.theme-abstract .lang-btn.active {
+  background: #ff8673;
+  color: #fff;
+}
+
+/* GitHub Button */
+.theme-abstract .github-btn {
+  border: 2px solid #ff8673;
+  background: transparent;
+  color: #ff8673;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+.theme-abstract .github-btn:hover {
+  background: #ff8673;
+  color: #fff;
+  transform: scale(1.05);
 }
