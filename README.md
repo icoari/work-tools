@@ -1,4 +1,4 @@
-# 🚀 Work Tools - A Productivity & Focus Companion  
+![image](https://github.com/user-attachments/assets/e423d2e0-3813-4ba8-aaaf-cffed4859002)# 🚀 Work Tools - A Productivity & Focus Companion  
 
 > **🛠️ Project 01 - Work Tools is a personal learning journey** to improve my **JavaScript** skills and gain experience in **UI design** for future projects. By building Work Tools, I aim to deepen my understanding of interactive web applications and frontend development.  
 
@@ -41,8 +41,12 @@ git clone https://github.com/icoari/work-tools.git
 Work Tools is a passion project built to explore **JavaScript**, **UI development**, and **frontend best practices**.  
 Contributions, feedback, and suggestions are always welcome via **Issues** or **Pull Requests**! 🚀  
 
-🔗 **[GitHub Repository](https://github.com/your-username/work-tools)**  
+🔗 **[GitHub Repository](https://github.com/icoari/work-tools)**  
 
 ---
 
 🆓 **" No ads plan, completely free, no support provided. 🚀"**  
+
+![image](https://github.com/user-attachments/assets/cd7e0c27-941c-4ec8-873f-680756bfefb9)
+![image](https://github.com/user-attachments/assets/f953947d-4f8b-4a2f-abb9-4f9a45e57e5a)
+
