@@ -1,11 +1,15 @@
-/* Reset and Box-sizing */
+/* ===================================================================
+   Section 1: Reset and Global Settings
+=================================================================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Animations */
+/* ===================================================================
+   Section 2: Animations
+=================================================================== */
 @keyframes softGlow {
   0% { opacity: 0.2; transform: scale(1); }
   50% { opacity: 0.5; transform: scale(1.2); }
@@ -20,7 +24,9 @@
   100% { transform: translate(-30%, -30%) scale(1); }
 }
 
-/* Body (light theme by default) */
+/* ===================================================================
+   Section 3: Body and Background
+=================================================================== */
 body {
   background: linear-gradient(135deg, #f5f5f5, #e0f7fa);
   background-size: cover;
@@ -31,7 +37,9 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
-/* Animated Glow */
+/* ===================================================================
+   Section 4: Animated Glow
+=================================================================== */
 #animated-glow {
   position: fixed;
   top: 0;
@@ -52,12 +60,16 @@ body {
   filter: blur(50px);
 }
 
-/* Bubbly Background Canvas */
+/* ===================================================================
+   Section 5: Bubbly Background Canvas
+=================================================================== */
 #bubbly-bg {
   display: none;
 }
 
-/* Main Container */
+/* ===================================================================
+   Section 6: Main Container
+=================================================================== */
 .container {
   display: flex;
   flex-direction: row;
@@ -74,7 +86,9 @@ body {
   z-index: 1;
 }
 
-/* Main Section (Visualization) */
+/* ===================================================================
+   Section 7: Main Content (Visualization)
+=================================================================== */
 .main-section {
   flex: 2;
   position: relative;
@@ -87,7 +101,9 @@ body {
   justify-content: center;
 }
 
-/* Sidebar (Settings) */
+/* ===================================================================
+   Section 8: Sidebar (Settings)
+=================================================================== */
 .sidebar {
   width: 400px;
   padding: 20px;
@@ -100,7 +116,9 @@ body {
   background: rgba(255, 255, 255, 0.98);
 }
 
-/* Tabs */
+/* ===================================================================
+   Section 9: Tabs
+=================================================================== */
 .tabs {
   display: flex;
   width: 100%;
@@ -135,7 +153,9 @@ body {
   border-radius: 8px;
 }
 
-/* Settings */
+/* ===================================================================
+   Section 10: Settings Panel
+=================================================================== */
 .settings {
   width: 100%;
   margin-top: 10px;
@@ -145,6 +165,9 @@ body {
   display: none;
 }
 
+/* ===================================================================
+   Section 11: Form Elements
+=================================================================== */
 h2 {
   margin-bottom: 15px;
   font-size: 1.5em;
@@ -228,7 +251,9 @@ span {
   margin-bottom: 10px;
 }
 
-/* Sidebar Buttons */
+/* ===================================================================
+   Section 12: Sidebar Buttons and Controls
+=================================================================== */
 .controls {
   margin-top: auto;
   display: flex;
@@ -263,7 +288,7 @@ span {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-#add-task-btn{
+#add-task-btn {
   width: 100%;
   text-align: center;
   padding: 12px;
@@ -310,7 +335,9 @@ span {
   text-align: center;
 }
 
-/* Language Buttons */
+/* ===================================================================
+   Section 13: Language and GitHub Buttons
+=================================================================== */
 .language-container {
   display: flex;
   gap: 8px;
@@ -343,7 +370,6 @@ span {
   border-color: #00796b;
 }
 
-/* GitHub Button */
 .github-btn {
   width: 40px;
   height: 40px;
@@ -370,7 +396,9 @@ span {
   font-size: 1.4em;
 }
 
-/* Toggle Container */
+/* ===================================================================
+   Section 14: Toggle Container
+=================================================================== */
 .toggle-container {
   display: flex;
   align-items: center;
@@ -391,7 +419,9 @@ span {
   color: #333333;
 }
 
-/* Theme Buttons */
+/* ===================================================================
+   Section 15: Theme Buttons
+=================================================================== */
 .theme-container {
   display: flex;
   gap: 8px;
@@ -425,6 +455,9 @@ span {
   border-color: #00796b;
 }
 
+/* ===================================================================
+   Section 16: Slider Component
+=================================================================== */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -457,7 +490,9 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-/* Meditation, Pomodoro, Tasks, Statistics Sections */
+/* ===================================================================
+   Section 17: Section Containers (Meditation, Pomodoro, Tasks, Statistics)
+=================================================================== */
 .meditation-section,
 .pomodoro-section,
 .tasks-section,
@@ -539,7 +574,9 @@ input:checked + .slider:before {
   color: #555555;
 }
 
-/* Tasks */
+/* ===================================================================
+   Section 18: Tasks
+=================================================================== */
 .tasks-container {
   width: 100%;
   height: 100%;
@@ -595,7 +632,6 @@ input:checked + .slider:before {
   text-decoration: line-through;
 }
 
-/* Circular Checkbox with Checkmark */
 .task-checkbox {
   width: 20px;
   height: 20px;
@@ -614,7 +650,6 @@ input:checked + .slider:before {
   font-weight: bold;
 }
 
-/* Task Title */
 .task-title {
   flex-grow: 1;
   cursor: text;
@@ -642,7 +677,6 @@ input:checked + .slider:before {
   box-shadow: none;
 }
 
-/* Delete Button */
 .trash-btn {
   background: none;
   border: none;
@@ -657,7 +691,6 @@ input:checked + .slider:before {
   color: #f44336;
 }
 
-/* Color Palette */
 .color-palette {
   display: flex;
   gap: 5px;
@@ -676,7 +709,9 @@ input:checked + .slider:before {
   border: 2px solid #333333;
 }
 
-/* Statistics */
+/* ===================================================================
+   Section 19: Statistics
+=================================================================== */
 .stats-container {
   width: 100%;
   height: 100%;
@@ -724,7 +759,9 @@ input:checked + .slider:before {
   color: #009688;
 }
 
-/* Responsive Design */
+/* ===================================================================
+   Section 20: Responsive Design
+=================================================================== */
 @media (max-width: 900px) {
   .container {
     flex-direction: column;
@@ -770,26 +807,20 @@ input:checked + .slider:before {
   }
 }
 
-/* ====================================================
-   THEME SUPPLEMENTS (DARK, NATURE, ABSTRACT)
-   Apply a .theme-XXX class to <body>
-====================================================*/
+/* ===================================================================
+   Section 21: Theme Supplements
+=================================================================== */
 
-/* ===============================
-   1) Dark Mode
-   ==============================*/
+/* Subsection 21.1: Dark Mode */
 .theme-dark {
-  /* Main Background */
   background: #121212;
 }
 
-/* Main Container */
 .theme-dark .container {
   background: #1e1e1e;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.85);
 }
 
-/* Sidebar */
 .theme-dark .sidebar {
   background: #1c1c1c;
   border-left: 2px solid #03DAC6;
@@ -812,10 +843,9 @@ input:checked + .slider:before {
   background-repeat: no-repeat;
   background-position: right 10px center;
   background-size: 12px;
-  padding-right: 30px; /* Pour éviter que le texte chevauche la flèche */
+  padding-right: 30px;
 }
 
-/* Titles, Texts, Tabs */
 .theme-dark h2,
 .theme-dark label,
 .theme-dark span,
@@ -833,7 +863,6 @@ input:checked + .slider:before {
   border-radius: 8px;
 }
 
-/* General Buttons */
 .theme-dark .btn {
   background: #03DAC6;
   color: #000;
@@ -845,7 +874,6 @@ input:checked + .slider:before {
   transform: translateY(-2px);
 }
 
-/* Reset Button */
 .theme-dark .reset-btn {
   border: 2px solid #03DAC6;
   color: #03DAC6;
@@ -859,7 +887,6 @@ input:checked + .slider:before {
   transform: scale(1.1);
 }
 
-/* Tasks */
 .theme-dark .task-item {
   background: #2a2a2a;
   border-left: 5px solid #03DAC6;
@@ -871,7 +898,6 @@ input:checked + .slider:before {
   color: #888888;
 }
 
-/* Trash Icon */
 .theme-dark .trash-btn {
   color: #999999;
 }
@@ -879,7 +905,6 @@ input:checked + .slider:before {
   color: #f44336;
 }
 
-/* Statistics Cards */
 .theme-dark .stat-card {
   background: #2a2a2a;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
@@ -888,14 +913,12 @@ input:checked + .slider:before {
   color: #03DAC6;
 }
 
-/* Texts in Meditation/Pomodoro Circles */
 .theme-dark #phase-text,
 .theme-dark #pomodoro-timer,
 .theme-dark #pomodoro-step-label {
   color: #f0f0f0;
 }
 
-/* Theme, Language Containers */
 .theme-dark .toggle-container,
 .theme-dark .theme-container,
 .theme-dark .language-container {
@@ -903,7 +926,6 @@ input:checked + .slider:before {
   border-radius: 8px;
 }
 
-/* Theme Buttons */
 .theme-dark .theme-btn {
   border: 2px solid #03DAC6;
   color: #03DAC6;
@@ -920,7 +942,6 @@ input:checked + .slider:before {
   color: #000;
 }
 
-/* Language Buttons */
 .theme-dark .lang-btn {
   border: 2px solid #03DAC6;
   color: #03DAC6;
@@ -937,7 +958,6 @@ input:checked + .slider:before {
   color: #000;
 }
 
-/* GitHub Button */
 .theme-dark .github-btn {
   border: 2px solid #03DAC6;
   color: #03DAC6;
@@ -950,9 +970,7 @@ input:checked + .slider:before {
   transform: scale(1.05);
 }
 
-/* ===============================
-   2) Nature Theme
-   ==============================*/
+/* Subsection 21.2: Nature Theme */
 .theme-nature {
   background: linear-gradient(135deg, #a8e063, #56ab2f);
 }
@@ -991,7 +1009,6 @@ input:checked + .slider:before {
   background: #3a8b1f;
 }
 
-/* Reset Button */
 .theme-nature .reset-btn {
   border: 2px solid #56ab2f;
   color: #2f4f1c;
@@ -1001,7 +1018,6 @@ input:checked + .slider:before {
   color: #fff;
 }
 
-/* Tasks */
 .theme-nature .task-item {
   background: #f1ffe3;
   border-left: 5px solid #76b852;
@@ -1012,7 +1028,6 @@ input:checked + .slider:before {
   color: #2f4f1c;
 }
 
-/* Trash Icon */
 .theme-nature .trash-btn {
   color: #2f4f1c;
 }
@@ -1020,7 +1035,6 @@ input:checked + .slider:before {
   color: #ff4444;
 }
 
-/* Statistics Cards */
 .theme-nature .stat-card {
   background: #f1ffe3;
 }
@@ -1028,21 +1042,18 @@ input:checked + .slider:before {
   color: #56ab2f;
 }
 
-/* Texts in Meditation/Pomodoro Circles */
 .theme-nature #phase-text,
 .theme-nature #pomodoro-timer,
 .theme-nature #pomodoro-step-label {
   color: #2f4f1c;
 }
 
-/* Theme, Language Containers */
 .theme-nature .theme-container,
 .theme-nature .language-container,
 .theme-nature .toggle-container {
   background: rgba(255, 255, 255, 0.8);
 }
 
-/* Theme Buttons */
 .theme-nature .theme-btn {
   background: transparent;
   border: 2px solid #56ab2f;
@@ -1058,7 +1069,6 @@ input:checked + .slider:before {
   color: #fff;
 }
 
-/* Language Buttons */
 .theme-nature .lang-btn {
   background: transparent;
   border: 2px solid #56ab2f;
@@ -1074,7 +1084,6 @@ input:checked + .slider:before {
   color: #fff;
 }
 
-/* GitHub Button */
 .theme-nature .github-btn {
   background: transparent;
   border: 2px solid #56ab2f;
@@ -1086,12 +1095,8 @@ input:checked + .slider:before {
   color: #fff;
 }
 
-/* ===============================
-   3) Abstract Theme (Retro Vintage)
-   More Colorful & Vibrant
-   ==============================*/
+/* Subsection 21.3: Abstract Theme (Retro Vintage) */
 .theme-abstract {
-  /* Large multi-color gradient with retro and dynamic effect */
   background: linear-gradient(
     135deg,
     #f6d365,
@@ -1104,7 +1109,6 @@ input:checked + .slider:before {
   animation: vintageBG 12s ease-in-out infinite;
 }
 
-/* Animation for gradient scrolling effect */
 @keyframes vintageBG {
   0% {
     background-position: 0% 50%;
@@ -1117,19 +1121,16 @@ input:checked + .slider:before {
   }
 }
 
-/* Main Container */
 .theme-abstract .container {
   background: rgba(255, 255, 255, 0.85);
   box-shadow: 0 12px 40px rgba(255, 140, 100, 0.4);
 }
 
-/* Sidebar */
 .theme-abstract .sidebar {
   background: rgba(255, 255, 255, 0.9);
   border-left: none;
 }
 
-/* Titles, Texts, Tabs, etc. */
 .theme-abstract h2,
 .theme-abstract label,
 .theme-abstract span,
@@ -1141,14 +1142,12 @@ input:checked + .slider:before {
   text-shadow: 0 0 1px rgba(112, 50, 63, 0.3);
 }
 
-/* Tabs */
 .theme-abstract .tab-button:hover,
 .theme-abstract .tab-button.active {
   background: #ff8673;
   color: #fff;
 }
 
-/* General Buttons */
 .theme-abstract .btn {
   background: #ff8673; 
   color: #fff;
@@ -1165,7 +1164,6 @@ input:checked + .slider:before {
   box-shadow: 0 2px 6px rgba(255, 140, 100, 0.3);
 }
 
-/* Reset Button */
 .theme-abstract .reset-btn {
   border: 2px solid #ff8673;
   background: transparent;
@@ -1178,7 +1176,6 @@ input:checked + .slider:before {
   transform: scale(1.1);
 }
 
-/* Tasks */
 .theme-abstract .task-item {
   background: #fff1eb;
   border-left: 5px solid #ff8673;
@@ -1190,7 +1187,6 @@ input:checked + .slider:before {
   color: #90535f;
 }
 
-/* Trash Icon */
 .theme-abstract .trash-btn {
   color: #bf6a80;
 }
@@ -1198,7 +1194,6 @@ input:checked + .slider:before {
   color: #ff5240;
 }
 
-/* Statistics Cards */
 .theme-abstract .stat-card {
   background: #fff1eb;
   box-shadow: 0 2px 6px rgba(255, 140, 100, 0.2);
@@ -1208,7 +1203,6 @@ input:checked + .slider:before {
   text-shadow: 0 0 1px #fff;
 }
 
-/* Texts in Meditation/Pomodoro Circles */
 .theme-abstract #phase-text,
 .theme-abstract #pomodoro-timer,
 .theme-abstract #pomodoro-step-label {
@@ -1216,7 +1210,6 @@ input:checked + .slider:before {
   text-shadow: 0 0 1px rgba(255, 255, 255, 0.6);
 }
 
-/* Theme, Language Containers */
 .theme-abstract .theme-container,
 .theme-abstract .language-container,
 .theme-abstract .toggle-container {
@@ -1224,7 +1217,6 @@ input:checked + .slider:before {
   border-radius: 8px;
 }
 
-/* Theme Buttons */
 .theme-abstract .theme-btn {
   border: 2px solid #ff8673;
   background: transparent;
@@ -1241,7 +1233,6 @@ input:checked + .slider:before {
   color: #fff;
 }
 
-/* Language Buttons */
 .theme-abstract .lang-btn {
   border: 2px solid #ff8673;
   background: transparent;
@@ -1258,7 +1249,6 @@ input:checked + .slider:before {
   color: #fff;
 }
 
-/* GitHub Button */
 .theme-abstract .github-btn {
   border: 2px solid #ff8673;
   background: transparent;
@@ -1269,4 +1259,571 @@ input:checked + .slider:before {
   background: #ff8673;
   color: #fff;
   transform: scale(1.05);
+}
+
+/* ===================================================================
+   Section 22: Mobile Specific Styles
+=================================================================== */
+@media (max-width: 900px) {
+  .container {
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mobile-tabs {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .mobile-tabs.hidden {
+    transform: translateY(-100%);
+  }
+
+  .mobile-tab-button {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .mobile-tab-button i {
+    font-size: 1.4em;
+    margin-bottom: 4px;
+    transition: transform 0.3s ease;
+  }
+
+  .mobile-tab-button:active {
+    transform: scale(0.95);
+  }
+
+  .mobile-tab-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(0, 150, 136, 0.3);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+  }
+
+  .mobile-tab-button:active::after {
+    animation: ripple 0.6s ease-out;
+  }
+
+  @keyframes ripple {
+    0% {
+      transform: scale(0, 0);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(40, 40);
+      opacity: 0;
+    }
+  }
+
+  .mobile-tab-button::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #009688;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+
+  .mobile-tab-button.active::before {
+    width: 50%;
+  }
+
+  .mobile-tab-button.active i {
+    transform: translateY(-2px);
+  }
+
+  .theme-dark .mobile-tabs {
+    background: rgba(33, 33, 33, 0.95);
+  }
+
+  .theme-dark .mobile-tab-button::after {
+    background: rgba(3, 218, 198, 0.3);
+  }
+
+  .theme-dark .mobile-tab-button::before {
+    background: #03DAC6;
+  }
+
+  .theme-nature .mobile-tabs {
+    background: rgba(241, 248, 233, 0.95);
+  }
+
+  .theme-nature .mobile-tab-button::after {
+    background: rgba(86, 171, 47, 0.3);
+  }
+
+  .theme-nature .mobile-tab-button::before {
+    background: #56ab2f;
+  }
+
+  .theme-abstract .mobile-tabs {
+    background: rgba(255, 241, 235, 0.95);
+  }
+
+  .theme-abstract .mobile-tab-button::after {
+    background: rgba(255, 134, 115, 0.3);
+  }
+
+  .theme-abstract .mobile-tab-button::before {
+    background: #ff8673;
+  }
+
+  .main-section > section {
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+  }
+
+  .main-section > section.hidden {
+    opacity: 0;
+  }
+
+  .main-section {
+    margin-top: 70px;
+    margin-bottom: 80px;
+    min-height: calc(100vh - 150px);
+  }
+
+  .mobile-controls {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-around;
+    z-index: 1000;
+  }
+
+  .controls-mobile {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    padding: 10px 15px;
+    align-items: center;
+  }
+
+  .controls-mobile .btn {
+    height: 45px;
+  }
+
+  .controls-mobile .settings-btn {
+    width: 45px !important;
+    flex: none;
+  }
+
+  #add-task-btn-mobile {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1.1em;
+    background: #FF5722;
+  }
+
+  #add-task-btn-mobile:hover {
+    background: #E64A19;
+  }
+
+  #add-task-btn-mobile i {
+    font-size: 1.2em;
+  }
+
+  .settings-toggle {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #009688;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+  }
+
+  .settings-toggle:hover {
+    transform: rotate(30deg);
+    background: #00796b;
+  }
+
+  .settings-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    backdrop-filter: blur(5px);
+  }
+
+  .settings-modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .settings-modal-content {
+    position: relative;
+    width: 90%;
+    max-height: 80vh;
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    overflow-y: auto;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+  }
+
+  .settings-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .close-modal-btn {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: none;
+    position: relative;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .close-modal-btn:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .close-modal-btn::before,
+  .close-modal-btn::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 2px;
+    background-color: #666;
+    border-radius: 1px;
+    transition: background-color 0.3s;
+  }
+
+  .close-modal-btn::before {
+    transform: rotate(45deg);
+  }
+
+  .close-modal-btn::after {
+    transform: rotate(-45deg);
+  }
+
+  .close-modal-btn:hover::before,
+  .close-modal-btn:hover::after {
+    background-color: #333;
+  }
+
+  .theme-dark .close-modal-btn::before,
+  .theme-dark .close-modal-btn::after {
+    background-color: #aaa;
+  }
+
+  .theme-dark .close-modal-btn:hover::before,
+  .theme-dark .close-modal-btn:hover::after {
+    background-color: #fff;
+  }
+
+  .theme-dark .settings-modal-header {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .settings-btn {
+    background: #009688;
+    width: 45px !important;
+    height: 45px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50% !important;
+    flex: none !important;
+  }
+
+  .settings-btn i {
+    font-size: 1.2em;
+  }
+
+  .controls-mobile {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    padding: 10px 15px;
+    align-items: center;
+  }
+
+  .controls-mobile .btn:not(.settings-btn) {
+    flex: 1;
+    min-height: 45px;
+  }
+
+  .mobile-controls {
+    display: flex;
+  }
+
+  .theme-light .mobile-tabs,
+  .theme-light .mobile-controls {
+    background: rgba(255, 255, 255, 0.95);
+  }
+  
+  .theme-light .settings-modal-content {
+    background: #ffffff;
+  }
+
+  .theme-dark .mobile-tabs,
+  .theme-dark .mobile-controls {
+    background: rgba(33, 33, 33, 0.95);
+  }
+  
+  .theme-dark .mobile-tab-button {
+    color: #aaaaaa;
+  }
+  
+  .theme-dark .mobile-tab-button.active {
+    color: #80cbc4;
+  }
+  
+  .theme-dark .settings-modal-content {
+    background: #212121;
+    color: #ffffff;
+  }
+  
+  .theme-nature .mobile-tabs,
+  .theme-nature .mobile-controls {
+    background: rgba(241, 248, 233, 0.95);
+  }
+  
+  .theme-nature .mobile-tab-button.active {
+    color: #56ab2f;
+  }
+  
+  .theme-nature .settings-modal-content {
+    background: #f1f8e9;
+  }
+  
+  .theme-abstract .mobile-tabs,
+  .theme-abstract .mobile-controls {
+    background: rgba(255, 241, 235, 0.95);
+  }
+  
+  .theme-abstract .mobile-tab-button.active {
+    color: #ff8673;
+  }
+  
+  .theme-abstract .settings-modal-content {
+    background: #fff1eb;
+  }
+  
+  .settings-modal {
+    backdrop-filter: blur(8px);
+  }
+  
+  .settings-modal-content {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .settings-btn-large {
+    width: auto !important;
+    height: auto !important;
+    padding: 12px 20px !important;
+    border-radius: 25px !important;
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1em !important;
+  }
+  
+  .settings-btn-large i {
+    font-size: 1.2em;
+  }
+  
+  #add-task-btn-mobile {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1.1em;
+  }
+  
+  #add-task-btn-mobile i {
+    font-size: 1.2em;
+  }
+  
+  #task-text-modal {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+  }
+  
+  #task-color-palette-modal {
+    margin-bottom: 20px;
+  }
+  
+  #add-task-modal-btn {
+    width: 100%;
+  }
+  
+  .theme-light #add-task-btn-mobile {
+    background: #FF5722;
+  }
+  .theme-light #add-task-btn-mobile:hover {
+    background: #E64A19;
+  }
+  
+  .theme-dark #add-task-btn-mobile {
+    background: #03DAC6;
+    color: #000;
+  }
+  .theme-dark #add-task-btn-mobile:hover {
+    background: #00c2ac;
+  }
+  
+  .theme-nature #add-task-btn-mobile {
+    background: #56ab2f;
+    color: #fff;
+  }
+  .theme-nature #add-task-btn-mobile:hover {
+    background: #3a8b1f;
+  }
+  
+  .theme-abstract #add-task-btn-mobile {
+    background: #ff8673;
+    color: #fff;
+  }
+  .theme-abstract #add-task-btn-mobile:hover {
+    background: #ff705c;
+  }
+}
+
+/* ===================================================================
+   Section 23: Desktop Only Styles
+=================================================================== */
+@media (min-width: 901px) {
+  .mobile-tabs,
+  .mobile-controls,
+  .settings-modal,
+  [class*="-controls-mobile"],
+  .settings-btn {
+    display: none !important;
+  }
+}
+
+/* ===================================================================
+   Section 24: Statistics Settings Button
+=================================================================== */
+#stats-settings-toggle {
+  width: 100% !important;
+  height: auto !important;
+  padding: 12px 20px !important;
+  border-radius: 25px !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1.1em !important;
+  font-weight: normal;
+  text-transform: none;
+}
+
+#stats-settings-toggle i {
+  font-size: 1.2em;
+}
+
+#stats-settings-toggle span {
+  font-size: inherit;
+  margin: 0;
+  font-weight: inherit;
+}
+
+.theme-light #stats-settings-toggle {
+  background: #FF5722;
+}
+.theme-light #stats-settings-toggle:hover {
+  background: #E64A19;
+}
+
+.theme-dark #stats-settings-toggle {
+  background: #03DAC6;
+  color: #000;
+}
+.theme-dark #stats-settings-toggle:hover {
+  background: #00c2ac;
+}
+
+.theme-nature #stats-settings-toggle {
+  background: #56ab2f;
+  color: #fff;
+}
+.theme-nature #stats-settings-toggle:hover {
+  background: #3a8b1f;
+}
+
+.theme-abstract #stats-settings-toggle {
+  background: #ff8673;
+  color: #fff;
+}
+.theme-abstract #stats-settings-toggle:hover {
+  background: #ff705c;
 }

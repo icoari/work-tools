@@ -27,7 +27,40 @@
   <!-- Animated Background (Bubbles) -->
   <canvas id="bubbly-bg"></canvas>
 
+  <!-- Settings Modal -->
+  <div id="settings-modal" class="settings-modal">
+    <div class="settings-modal-content">
+      <div class="settings-modal-header">
+        <h2 data-i18n="settings">Paramètres</h2>
+        <button class="close-modal-btn" aria-label="Fermer"></button>
+      </div>
+      <div class="settings-modal-body">
+        <!-- Les paramètres seront injectés ici dynamiquement -->
+      </div>
+    </div>
+  </div>
+
   <div class="container">
+    <!-- Mobile Tabs Navigation -->
+    <nav class="mobile-tabs">
+      <button class="mobile-tab-button active" data-tab="meditation">
+        <i class="fas fa-spa"></i>
+        <span data-i18n="meditationTab">Méditation</span>
+      </button>
+      <button class="mobile-tab-button" data-tab="pomodoro">
+        <i class="fas fa-clock"></i>
+        <span data-i18n="pomodoroTab">Pomodoro</span>
+      </button>
+      <button class="mobile-tab-button" data-tab="tasks">
+        <i class="fas fa-clipboard-list"></i>
+        <span data-i18n="tasksTab">Tâches</span>
+      </button>
+      <button class="mobile-tab-button" data-tab="stats">
+        <i class="fas fa-chart-pie"></i>
+        <span data-i18n="statisticsTab">Statistiques</span>
+      </button>
+    </nav>
+
     <!-- Main Visualization Section -->
     <main class="main-section">
       <!-- Meditation -->
@@ -347,6 +380,41 @@
       <!-- Statistics Controls -->
       <div class="controls hidden" id="stats-controls"></div>
     </aside>
+
+    <!-- Mobile Controls -->
+    <div class="mobile-controls">
+      <!-- Meditation Controls Mobile -->
+      <div id="meditation-controls-mobile" class="controls-mobile">
+        <button id="start-meditation-btn-mobile" class="btn" data-i18n="startBtn">Démarrer</button>
+        <button id="meditation-settings-toggle" class="btn settings-btn">
+          <i class="fas fa-cog"></i>
+        </button>
+        <button id="reset-meditation-btn-mobile" class="btn" data-i18n="resetBtn">Réinitialiser</button>
+      </div>
+
+      <!-- Pomodoro Controls Mobile -->
+      <div id="pomodoro-controls-mobile" class="controls-mobile hidden">
+        <button id="pomodoro-start-btn-mobile" class="btn" data-i18n="startBtn">Démarrer</button>
+        <button id="pomodoro-settings-toggle" class="btn settings-btn">
+          <i class="fas fa-cog"></i>
+        </button>
+        <button id="pomodoro-reset-btn-mobile" class="btn" data-i18n="resetBtn">Réinitialiser</button>
+      </div>
+
+      <!-- Tasks Controls Mobile -->
+      <div id="tasks-controls-mobile" class="controls-mobile hidden">
+        <button id="tasks-settings-toggle" class="btn settings-btn">
+          <i class="fas fa-cog"></i>
+        </button>
+      </div>
+
+      <!-- Stats Controls Mobile -->
+      <div id="stats-controls-mobile" class="controls-mobile hidden">
+        <button id="stats-settings-toggle" class="btn settings-btn">
+          <i class="fas fa-cog"></i>
+        </button>
+      </div>
+    </div>
   </div>
 
   <!-- Audio Elements -->

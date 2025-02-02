@@ -1,6 +1,6 @@
-/************************************************
- * BUBBLY ANIMATED BACKGROUND
- ************************************************/
+// ================================================
+// BUBBLY ANIMATED BACKGROUND
+// ================================================
 bubbly({
   canvas: document.getElementById("bubbly-bg"),
   colorStart: "transparent",
@@ -12,9 +12,9 @@ bubbly({
   }
 });
 
-/************************************************
- * TABS
- ************************************************/
+// ================================================
+// TABS
+// ================================================
 const tabButtons = document.querySelectorAll('.tab-button');
 
 const meditationSection = document.getElementById('meditation-section');
@@ -34,7 +34,6 @@ const statsControls = document.getElementById('stats-controls');
 
 tabButtons.forEach((button) => {
   button.addEventListener('click', () => {
-    // Reset classes
     tabButtons.forEach((btn) => btn.classList.remove('active'));
     button.classList.add('active');
 
@@ -69,19 +68,15 @@ tabButtons.forEach((button) => {
   });
 });
 
-/************************************************
- * TRANSLATIONS & LANGUAGE HANDLING
- ************************************************/
-
+// ================================================
+// TRANSLATIONS & LANGUAGE HANDLING
+// ================================================
 const translations = {
   fr: {
-    // -- Onglets --
     meditationTab: "Méditation",
     pomodoroTab: "Pomodoro",
     tasksTab: "Tâches",
     statisticsTab: "Statistiques",
-    
-    // -- Méditation --
     meditationSettings: "Paramètres de méditation",
     inhaleLabel: "Inspiration (secondes)",
     holdLabel: "Pause (secondes)",
@@ -105,8 +100,6 @@ const translations = {
     inhale: "Inspirez",
     hold: "Retenez",
     exhale: "Expirez",
-    
-    // -- Pomodoro --
     pomodoroSettings: "Paramètres du Pomodoro",
     workDuration: "Durée de travail (minutes)",
     shortBreak: "Pause courte (minutes)",
@@ -116,8 +109,6 @@ const translations = {
     workLabel: "Travail",
     shortBreakLabel: "Pause courte",
     longBreakLabel: "Pause longue",
-    
-    // -- Tâches --
     taskSettings: "Paramètres des tâches",
     createNewTask: "Créer une nouvelle tâche",
     taskPlaceholder: "Nouvelle tâche...",
@@ -128,8 +119,6 @@ const translations = {
     clearCompletedTasks: "Effacer tâches terminées",
     undoLastAction: "Annuler la dernière action",
     taskListTitle: "Liste de tâches",
-    
-    // -- Statistiques --
     globalStatsTitle: "Statistiques globales",
     pomodoroSessions: "Sessions de Pomodoro",
     completedTasks: "Tâches terminées",
@@ -141,30 +130,20 @@ const translations = {
     pomodoroShort: "Pomodoro",
     tasksShort: "Tâches",
     meditationShort: "Méditation",
-    
-    // -- Boutons bas --
     startBtn: "Démarrer",
     pauseBtn: "Pause",
     resumeBtn: "Reprendre",
     resetBtn: "Réinitialiser",
-    
-    // -- Autres Stats --
     resetStats: "Réinitialiser stats",
     appSettings: "Paramètres de l'application",
     themeLabel: "Thème",
     languageLabel: "Langue",
-    
-    // -- Pomodoro dynamique --
-    // (géré directement par script : 'Travail', 'Pause courte', 'Pause longue' etc.)
   },
   en: {
-    // -- Tabs --
     meditationTab: "Meditation",
     pomodoroTab: "Pomodoro",
     tasksTab: "Tasks",
     statisticsTab: "Statistics",
-    
-    // -- Meditation --
     meditationSettings: "Meditation Settings",
     inhaleLabel: "Inhale (seconds)",
     holdLabel: "Hold (seconds)",
@@ -188,8 +167,6 @@ const translations = {
     inhale: "Inhale",
     hold: "Hold",
     exhale: "Exhale",
-    
-    // -- Pomodoro --
     pomodoroSettings: "Pomodoro Settings",
     workDuration: "Work Duration (minutes)",
     shortBreak: "Short Break (minutes)",
@@ -199,8 +176,6 @@ const translations = {
     workLabel: "Work",
     shortBreakLabel: "Short Break",
     longBreakLabel: "Long Break",
-    
-    // -- Tasks --
     taskSettings: "Task Settings",
     createNewTask: "Create a New Task",
     taskPlaceholder: "New task...",
@@ -211,8 +186,6 @@ const translations = {
     clearCompletedTasks: "Clear Completed Tasks",
     undoLastAction: "Undo Last Action",
     taskListTitle: "Task List",
-    
-    // -- Statistics --
     globalStatsTitle: "Global Statistics",
     pomodoroSessions: "Pomodoro Sessions",
     completedTasks: "Completed Tasks",
@@ -224,27 +197,20 @@ const translations = {
     pomodoroShort: "Pomodoro",
     tasksShort: "Tasks",
     meditationShort: "Meditation",
-    
-    // -- Bottom Buttons --
     startBtn: "Start",
     pauseBtn: "Pause",
     resumeBtn: "Resume",
     resetBtn: "Reset",
-    
-    // -- Other Stats --
     resetStats: "Reset Stats",
     appSettings: "App Settings",
     themeLabel: "Theme",
     languageLabel: "Language",
   },
   es: {
-    // -- Pestañas --
     meditationTab: "Meditación",
     pomodoroTab: "Pomodoro",
     tasksTab: "Tareas",
     statisticsTab: "Estadísticas",
-    
-    // -- Meditación --
     meditationSettings: "Configuración de Meditación",
     inhaleLabel: "Inhalar (segundos)",
     holdLabel: "Mantener (segundos)",
@@ -268,8 +234,6 @@ const translations = {
     inhale: "Inhala",
     hold: "Mantén",
     exhale: "Exhala",
-    
-    // -- Pomodoro --
     pomodoroSettings: "Configuración de Pomodoro",
     workDuration: "Duración de trabajo (minutos)",
     shortBreak: "Pausa corta (minutos)",
@@ -279,8 +243,6 @@ const translations = {
     workLabel: "Trabajo",
     shortBreakLabel: "Pausa corta",
     longBreakLabel: "Pausa larga",
-    
-    // -- Tareas --
     taskSettings: "Configuración de Tareas",
     createNewTask: "Crear nueva tarea",
     taskPlaceholder: "Nueva tarea...",
@@ -291,8 +253,6 @@ const translations = {
     clearCompletedTasks: "Borrar tareas completadas",
     undoLastAction: "Deshacer última acción",
     taskListTitle: "Lista de Tareas",
-    
-    // -- Estadísticas --
     globalStatsTitle: "Estadísticas Globales",
     pomodoroSessions: "Sesiones de Pomodoro",
     completedTasks: "Tareas Completadas",
@@ -304,27 +264,20 @@ const translations = {
     pomodoroShort: "Pomodoro",
     tasksShort: "Tareas",
     meditationShort: "Meditación",
-    
-    // -- Botones Inferiores --
     startBtn: "Iniciar",
     pauseBtn: "Pausar",
     resumeBtn: "Reanudar",
     resetBtn: "Reiniciar",
-    
-    // -- Otras Stats --
     resetStats: "Reiniciar Stats",
     appSettings: "Configuración de la App",
     themeLabel: "Tema",
     languageLabel: "Idioma",
   },
   de: {
-    // -- Tabs --
     meditationTab: "Meditation",
     pomodoroTab: "Pomodoro",
     tasksTab: "Aufgaben",
     statisticsTab: "Statistiken",
-    
-    // -- Meditation --
     meditationSettings: "Meditationseinstellungen",
     inhaleLabel: "Einatmen (Sekunden)",
     holdLabel: "Anhalten (Sekunden)",
@@ -348,8 +301,6 @@ const translations = {
     inhale: "Einatmen",
     hold: "Halten",
     exhale: "Ausatmen",
-    
-    // -- Pomodoro --
     pomodoroSettings: "Pomodoro-Einstellungen",
     workDuration: "Arbeitsdauer (Minuten)",
     shortBreak: "Kurze Pause (Minuten)",
@@ -359,8 +310,6 @@ const translations = {
     workLabel: "Arbeit",
     shortBreakLabel: "Kurze Pause",
     longBreakLabel: "Lange Pause",
-    
-    // -- Aufgaben --
     taskSettings: "Aufgaben-Einstellungen",
     createNewTask: "Neue Aufgabe erstellen",
     taskPlaceholder: "Neue Aufgabe...",
@@ -371,8 +320,6 @@ const translations = {
     clearCompletedTasks: "Abgeschlossene löschen",
     undoLastAction: "Letzte Aktion rückgängig",
     taskListTitle: "Aufgabenliste",
-    
-    // -- Statistiken --
     globalStatsTitle: "Globale Statistiken",
     pomodoroSessions: "Pomodoro-Sitzungen",
     completedTasks: "Abgeschlossene Aufgaben",
@@ -384,14 +331,10 @@ const translations = {
     pomodoroShort: "Pomodoro",
     tasksShort: "Aufgaben",
     meditationShort: "Meditation",
-    
-    // -- Unten Buttons --
     startBtn: "Starten",
     pauseBtn: "Pause",
     resumeBtn: "Fortsetzen",
     resetBtn: "Zurücksetzen",
-    
-    // -- Sonstiges --
     resetStats: "Statistiken zurücksetzen",
     appSettings: "App-Einstellungen",
     themeLabel: "Thema",
@@ -399,37 +342,32 @@ const translations = {
   }
 };
 
-let currentLang = 'fr';  // Valeur par défaut
-let currentTheme = 'light'; // Thème clair par défaut
+let currentLang = 'fr';
+let currentTheme = 'light';
 
 function applyLanguage(lang) {
-  // Met à jour la langue courante
   currentLang = lang;
   localStorage.setItem('appLang', lang);
 
-  // Sélectionne tous les éléments avec data-i18n
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (translations[lang] && translations[lang][key]) {
       el.textContent = translations[lang][key];
     }
   });
-  
-  // Si un placeholder est nécessaire
+
   document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
     const key = el.getAttribute('data-i18n-placeholder');
     if (translations[lang] && translations[lang][key]) {
       el.setAttribute('placeholder', translations[lang][key]);
     }
   });
-  
-  // Mettre à jour les boutons "Pause/Resume" si besoin, etc. (cas dynamiques)
-  updateMeditationDynamicTexts(); 
+
+  updateMeditationDynamicTexts();
   updatePomodoroDynamicTexts();
 }
 
 function applyTheme(theme) {
-  // Retire toutes les classes de thème
   document.body.classList.remove('theme-light', 'theme-dark', 'theme-nature', 'theme-abstract');
   document.body.classList.add(`theme-${theme}`);
   localStorage.setItem('appTheme', theme);
@@ -444,7 +382,6 @@ function loadPreferences() {
   applyLanguage(currentLang);
 }
 
-// Gestion des clics sur les boutons de langue
 const langButtons = document.querySelectorAll('.lang-btn');
 langButtons.forEach(btn => {
   btn.addEventListener('click', () => {
@@ -455,7 +392,6 @@ langButtons.forEach(btn => {
   });
 });
 
-// Gestion des clics sur les boutons de thème
 const themeButtons = document.querySelectorAll('.theme-btn');
 themeButtons.forEach(btn => {
   btn.addEventListener('click', () => {
@@ -466,9 +402,9 @@ themeButtons.forEach(btn => {
   });
 });
 
-/************************************************
- * MEDITATION
- ************************************************/
+// ================================================
+// MEDITATION
+// ================================================
 const startMeditationBtn = document.getElementById('start-meditation-btn');
 const resetMeditationBtn = document.getElementById('reset-meditation-btn');
 const breatheCircle = document.getElementById('breathe-circle');
@@ -495,12 +431,16 @@ let medTimeoutId;
 let currentCycle = 0;
 let isPreparing = false;
 
-// Mise à jour des paramètres de méditation (text affiché à droite)
 function updateMeditationParams() {
   inhaleValue.textContent = inhaleSlider.value;
   holdValue.textContent = holdSlider.value;
   exhaleValue.textContent = exhaleSlider.value;
   cyclesValue.textContent = cyclesSlider.value;
+
+  localStorage.setItem('inhale-time', inhaleSlider.value);
+  localStorage.setItem('hold-time', holdSlider.value);
+  localStorage.setItem('exhale-time', exhaleSlider.value);
+  localStorage.setItem('cycles-count', cyclesSlider.value);
 }
 
 [inhaleSlider, holdSlider, exhaleSlider, cyclesSlider].forEach((slider) => {
@@ -508,33 +448,40 @@ function updateMeditationParams() {
 });
 updateMeditationParams();
 
-// Chargement des sons de méditation
 function loadMeditationSounds() {
-  if (backgroundSelect.value === 'none') {
+  const backgroundValue = localStorage.getItem('background-sound') || backgroundSelect.value;
+  const breatheValue = localStorage.getItem('breathe-sound') || breatheSelect.value;
+
+  if (backgroundValue === 'none') {
     backgroundAudio.src = '';
     backgroundAudio.pause();
   } else {
-    backgroundAudio.src = `assets/sounds/${backgroundSelect.value}`;
+    backgroundAudio.src = `assets/sounds/${backgroundValue}`;
   }
-  if (breatheSelect.value === 'none') {
+  
+  if (breatheValue === 'none') {
     breatheAudio.src = '';
     breatheAudio.pause();
   } else {
-    breatheAudio.src = `assets/sounds/${breatheSelect.value}`;
+    breatheAudio.src = `assets/sounds/${breatheValue}`;
   }
 }
-backgroundSelect.addEventListener('change', loadMeditationSounds);
-breatheSelect.addEventListener('change', loadMeditationSounds);
+backgroundSelect.addEventListener('change', () => {
+  localStorage.setItem('background-sound', backgroundSelect.value);
+  loadMeditationSounds();
+});
+breatheSelect.addEventListener('change', () => {
+  localStorage.setItem('breathe-sound', breatheSelect.value);
+  loadMeditationSounds();
+});
 loadMeditationSounds();
 
 function getTranslation(key) {
-  // Retourne la traduction du mot-clé dans la langue courante
   const langDict = translations[currentLang];
   return (langDict && langDict[key]) ? langDict[key] : key;
 }
 
 function updateMeditationDynamicTexts() {
-  // Par exemple, si on a besoin de changer le texte "Prepare Yourself"/"Inhale", etc.
   if (!medIsRunning && currentCycle === 0 && !isPreparing) {
     phaseText.textContent = getTranslation('prepare');
   }
@@ -543,10 +490,10 @@ function updateMeditationDynamicTexts() {
 function runMeditationCycle() {
   if (!medIsRunning || isPreparing) return;
 
-  const inhaleTime = parseInt(inhaleSlider.value);
-  const holdTime = parseInt(holdSlider.value);
-  const exhaleTime = parseInt(exhaleSlider.value);
-  const totalCycles = parseInt(cyclesSlider.value);
+  const inhaleTime = parseInt(localStorage.getItem('inhale-time') || inhaleSlider.value);
+  const holdTime = parseInt(localStorage.getItem('hold-time') || holdSlider.value);
+  const exhaleTime = parseInt(localStorage.getItem('exhale-time') || exhaleSlider.value);
+  const totalCycles = parseInt(localStorage.getItem('cycles-count') || cyclesSlider.value);
 
   if (currentCycle >= totalCycles) {
     stopMeditation();
@@ -555,7 +502,6 @@ function runMeditationCycle() {
   }
   currentCycle++;
 
-  // Inhale
   phaseText.textContent = getTranslation('inhale');
   breatheCircle.style.transition = `transform ${inhaleTime}s ease-in-out`;
   breatheCircle.style.transform = 'scale(1.6)';
@@ -565,13 +511,11 @@ function runMeditationCycle() {
   }
 
   medTimeoutId = setTimeout(() => {
-    // Hold
     phaseText.textContent = getTranslation('hold');
     breatheCircle.style.transition = `transform ${holdTime}s ease-in-out`;
     breatheCircle.style.transform = 'scale(1.6)';
 
     medTimeoutId = setTimeout(() => {
-      // Exhale
       phaseText.textContent = getTranslation('exhale');
       breatheCircle.style.transition = `transform ${exhaleTime}s ease-in-out`;
       breatheCircle.style.transform = 'scale(1)';
@@ -619,7 +563,7 @@ function stopMeditation() {
   breatheAudio.pause();
   breatheAudio.currentTime = 0;
   currentCycle = 0;
-  phaseText.textContent = getTranslation('prepare'); // re-affiche "Préparez-vous" etc.
+  phaseText.textContent = getTranslation('prepare');
   startMeditationBtn.textContent = getTranslation('startBtn');
   breatheCircle.style.transform = 'scale(1.6)';
 }
@@ -632,14 +576,12 @@ startMeditationBtn.addEventListener('click', () => {
 
     if (currentCycle === 0 && !isPreparing) {
       isPreparing = true;
-      // "Prepare Yourself" 
       phaseText.textContent = getTranslation('prepare');
       prepareCountdown(3);
     } else {
       runMeditationCycle();
     }
   } else {
-    // Pause
     medIsRunning = false;
     startMeditationBtn.textContent = getTranslation('resumeBtn');
     clearTimeout(medTimeoutId);
@@ -647,12 +589,11 @@ startMeditationBtn.addEventListener('click', () => {
     breatheAudio.pause();
   }
 });
-
 resetMeditationBtn.addEventListener('click', stopMeditation);
 
-/************************************************
- * POMODORO
- ************************************************/
+// ================================================
+// POMODORO
+// ================================================
 const pomodoroStartBtn = document.getElementById('pomodoro-start-btn');
 const pomodoroResetBtn = document.getElementById('pomodoro-reset-btn');
 const pomodoroTimer = document.getElementById('pomodoro-timer');
@@ -681,12 +622,16 @@ let isWorkPhase = true;
 let sessionsCompleted = 0;
 let timeLeft = parseInt(workSlider.value) * 60;
 
-// Mise à jour Pomodoro (valeurs)
 function updatePomodoroParams() {
   workValue.textContent = workSlider.value;
   shortBreakValue.textContent = shortBreakSlider.value;
   longBreakValue.textContent = longBreakSlider.value;
   sessionsValue.textContent = sessionsSlider.value;
+
+  localStorage.setItem('work-duration', workSlider.value);
+  localStorage.setItem('short-break', shortBreakSlider.value);
+  localStorage.setItem('long-break', longBreakSlider.value);
+  localStorage.setItem('sessions', sessionsSlider.value);
 }
 [workSlider, shortBreakSlider, longBreakSlider, sessionsSlider].forEach((slider) => {
   slider.addEventListener('input', () => {
@@ -703,30 +648,38 @@ function updatePomodoroParams() {
 updatePomodoroParams();
 
 function loadPomodoroSounds() {
-  if (pomodoroBackgroundSelect.value === 'none') {
+  const backgroundValue = localStorage.getItem('pomodoro-background-sound') || pomodoroBackgroundSelect.value;
+  const endValue = localStorage.getItem('pomodoro-end-sound') || pomodoroEndSelect.value;
+
+  if (backgroundValue === 'none') {
     pomodoroBackgroundAudio.src = '';
     pomodoroBackgroundAudio.pause();
   } else {
-    pomodoroBackgroundAudio.src = `assets/sounds/${pomodoroBackgroundSelect.value}`;
+    pomodoroBackgroundAudio.src = `assets/sounds/${backgroundValue}`;
   }
-  if (pomodoroEndSelect.value === 'none') {
+  
+  if (endValue === 'none') {
     pomodoroEndAudio.src = '';
     pomodoroEndAudio.pause();
   } else {
-    pomodoroEndAudio.src = `assets/sounds/${pomodoroEndSelect.value}`;
+    pomodoroEndAudio.src = `assets/sounds/${endValue}`;
   }
 }
-pomodoroBackgroundSelect.addEventListener('change', loadPomodoroSounds);
-pomodoroEndSelect.addEventListener('change', loadPomodoroSounds);
+pomodoroBackgroundSelect.addEventListener('change', () => {
+  localStorage.setItem('pomodoro-background-sound', pomodoroBackgroundSelect.value);
+  loadPomodoroSounds();
+});
+pomodoroEndSelect.addEventListener('change', () => {
+  localStorage.setItem('pomodoro-end-sound', pomodoroEndSelect.value);
+  loadPomodoroSounds();
+});
 loadPomodoroSounds();
 
 function updatePomodoroDynamicTexts() {
-  // Actualise juste le label si besoin
   if (isWorkPhase) {
     pomodoroStepLabel.textContent = getTranslation('workLabel');
   }
   else {
-    // On détermine si c'est short ou long
     if (sessionsCompleted % parseInt(sessionsSlider.value) === 0) {
       pomodoroStepLabel.textContent = getTranslation('longBreakLabel');
     } else {
@@ -765,13 +718,11 @@ function startPomodoro() {
     } else {
       clearInterval(pomodoroInterval);
 
-      // End Sound
       if (pomodoroEndAudio.src) {
         pomodoroEndAudio.currentTime = 0;
         pomodoroEndAudio.play();
       }
 
-      // Toggle between work and breaks
       if (isWorkPhase) {
         sessionsCompleted++;
         incrementStats('pomodoro-sessions');
@@ -790,7 +741,6 @@ function startPomodoro() {
         pomodoroStepLabel.textContent = getTranslation('workLabel');
       }
       
-      // Redémarre automatiquement la phase suivante si toujours en mode running
       setTimeout(() => {
         if (pomodoroRunning) {
           startPomodoro();
@@ -804,7 +754,6 @@ pomodoroStartBtn.addEventListener('click', () => {
   if (!pomodoroRunning) {
     startPomodoro();
   } else {
-    // Pause
     pomodoroRunning = false;
     clearInterval(pomodoroInterval);
     pomodoroBackgroundAudio.pause();
@@ -813,7 +762,6 @@ pomodoroStartBtn.addEventListener('click', () => {
   }
 });
 
-// Reset Pomodoro
 pomodoroResetBtn.addEventListener('click', () => {
   pomodoroRunning = false;
   clearInterval(pomodoroInterval);
@@ -821,7 +769,10 @@ pomodoroResetBtn.addEventListener('click', () => {
   pomodoroBackgroundAudio.currentTime = 0;
   isWorkPhase = true;
   sessionsCompleted = 0;
-  timeLeft = parseInt(workSlider.value) * 60;
+  
+  const savedWorkDuration = localStorage.getItem('work-duration') || workSlider.value;
+  timeLeft = parseInt(savedWorkDuration) * 60;
+  
   pomodoroStepLabel.textContent = getTranslation('workLabel');
   updatePomodoroDisplay();
   pomodoroStartBtn.textContent = getTranslation('startBtn');
@@ -832,9 +783,9 @@ function initPomodoroDisplay() {
   updatePomodoroDisplay();
 }
 
-/************************************************
- * TASKS
- ************************************************/
+// ================================================
+// TASKS
+// ================================================
 const tasksList = document.getElementById('tasks-list');
 const taskTextInput = document.getElementById('task-text');
 const colorDots = document.querySelectorAll('.color-dot');
@@ -847,7 +798,6 @@ let tasks = [];
 let selectedColor = '#FFE0B2';
 let undoStack = [];
 
-// Color Selection
 colorDots.forEach((dot) => {
   dot.addEventListener('click', () => {
     colorDots.forEach((d) => d.classList.remove('selected'));
@@ -856,7 +806,6 @@ colorDots.forEach((dot) => {
   });
 });
 
-// Load/Save Tasks
 function loadTasks() {
   const data = localStorage.getItem('tasksData');
   tasks = data ? JSON.parse(data) : [];
@@ -866,7 +815,6 @@ function saveTasks() {
   localStorage.setItem('tasksData', JSON.stringify(tasks));
 }
 
-// Render Tasks
 function renderTasks() {
   tasksList.innerHTML = '';
   const activeTasks = tasks.filter((t) => !t.completed);
@@ -885,13 +833,11 @@ function createTaskElement(task) {
   li.draggable = true;
   li.style.backgroundColor = task.completed ? '#dcdcdc' : task.color;
 
-  // Checkbox
   const checkbox = document.createElement('div');
   checkbox.classList.add('task-checkbox');
   checkbox.addEventListener('click', () => toggleTaskCompletion(task.id));
   li.appendChild(checkbox);
 
-  // Title
   const titleDiv = document.createElement('div');
   titleDiv.classList.add('task-title');
   const inputTitle = document.createElement('input');
@@ -899,7 +845,6 @@ function createTaskElement(task) {
   inputTitle.value = task.text;
   inputTitle.readOnly = true;
 
-  // Edit on Click
   titleDiv.addEventListener('click', () => {
     if (!inputTitle.readOnly) return;
     inputTitle.readOnly = false;
@@ -915,7 +860,6 @@ function createTaskElement(task) {
   titleDiv.appendChild(inputTitle);
   li.appendChild(titleDiv);
 
-  // Delete Button
   const trashBtn = document.createElement('button');
   trashBtn.classList.add('trash-btn');
   trashBtn.innerHTML = '🗑';
@@ -925,7 +869,6 @@ function createTaskElement(task) {
   });
   li.appendChild(trashBtn);
 
-  // Drag and Drop for Reordering
   li.addEventListener('dragstart', (e) => {
     e.dataTransfer.setData('text/plain', String(task.id));
   });
@@ -977,7 +920,6 @@ function deleteTask(id) {
   renderTasks();
 }
 
-// Undo Functionality
 function pushUndoState() {
   undoStack.push(JSON.stringify(tasks));
 }
@@ -990,7 +932,6 @@ function undo() {
   }
 }
 
-// Button Actions
 addTaskBtn.addEventListener('click', () => {
   const text = taskTextInput.value.trim();
   if (text) {
@@ -1024,7 +965,6 @@ clearCompletedTasksBtn.addEventListener('click', () => {
 
 undoBtn.addEventListener('click', undo);
 
-// Drag to Drop at End of List
 tasksList.addEventListener('dragover', (e) => {
   e.preventDefault();
 });
@@ -1041,13 +981,12 @@ tasksList.addEventListener('drop', (e) => {
   renderTasks();
 });
 
-// Initialize Tasks
 loadTasks();
 renderTasks();
 
-/************************************************
- * STATISTICS
- ************************************************/
+// ================================================
+// STATISTICS
+// ================================================
 const statsPomodoroSessions = document.getElementById('stats-pomodoro-sessions');
 const statsTasksCompleted = document.getElementById('stats-tasks-completed');
 const statsMeditationSessions = document.getElementById('stats-meditation-sessions');
@@ -1066,7 +1005,6 @@ const statsMeditationMonth = document.getElementById('stats-meditation-month');
 
 const resetStatsBtn = document.getElementById('reset-stats-btn');
 
-// Load/Save Statistics
 function loadStats() {
   const data = localStorage.getItem('appStats');
   return data ? JSON.parse(data) : {};
@@ -1076,13 +1014,11 @@ function saveStats(s) {
   localStorage.setItem('appStats', JSON.stringify(s));
 }
 
-// Reset Statistics
 resetStatsBtn.addEventListener('click', () => {
   localStorage.removeItem('appStats');
   updateStatsDisplay();
 });
 
-// Update Statistics Display
 function updateStatsDisplay() {
   const stats = loadStats();
   statsPomodoroSessions.textContent = stats['pomodoro-sessions'] || 0;
@@ -1102,7 +1038,6 @@ function updateStatsDisplay() {
   statsMeditationMonth.textContent = getCountByPeriod(stats, 'meditation-sessions', 'month');
 }
 
-// Increment Statistics
 function incrementStats(key) {
   const s = loadStats();
   s[key] = (s[key] || 0) + 1;
@@ -1115,7 +1050,6 @@ function incrementStats(key) {
   updateStatsDisplay();
 }
 
-// Filter by Period
 function getCountByPeriod(stats, eventType, period) {
   if (!stats.history) return 0;
   const now = new Date();
@@ -1136,7 +1070,6 @@ function getCountByPeriod(stats, eventType, period) {
 }
 
 function getYearWeek(d) {
-  // Renvoie le numéro de semaine (ISO) de l'année
   const date = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
   const dayNum = (date.getUTCDay() + 6) % 7;
   date.setUTCDate(date.getUTCDate() - dayNum + 3);
@@ -1146,9 +1079,32 @@ function getYearWeek(d) {
   return Math.floor((firstThursday - startYear) / (7 * 24 * 3600 * 1000)) + 1;
 }
 
-// Initialisation
+// ================================================
+// MOBILE SETTINGS MODAL & UTILITY FUNCTIONS
+// ================================================
 function init() {
   loadPreferences();
+  loadSoundPreferences();
+  loadMeditationPreferences();
+  loadPomodoroPreferences();
+  
+  const soundSelectors = {
+    'background-sound': backgroundSelect,
+    'breathe-sound': breatheSelect,
+    'pomodoro-background-sound': pomodoroBackgroundSelect,
+    'pomodoro-end-sound': pomodoroEndSelect
+  };
+
+  Object.entries(soundSelectors).forEach(([key, selector]) => {
+    const savedValue = localStorage.getItem(key);
+    if (savedValue) {
+      selector.value = savedValue;
+    }
+  });
+
+  loadMeditationSounds();
+  loadPomodoroSounds();
+
   langButtons.forEach(b => {
     if (b.getAttribute('data-lang') === currentLang) {
       b.classList.add('active');
@@ -1218,7 +1174,6 @@ function releaseWakeLock() {
   }
 }
 
-// Activer le Wake Lock quand une activité démarre
 document.getElementById('start-meditation-btn').addEventListener('click', () => {
   if (!medIsRunning) {
     requestWakeLock();
@@ -1237,3 +1192,672 @@ document.getElementById('pomodoro-start-btn').addEventListener('click', () => {
 
 document.getElementById('reset-meditation-btn').addEventListener('click', releaseWakeLock);
 document.getElementById('pomodoro-reset-btn').addEventListener('click', releaseWakeLock);
+
+function initMobileUI() {
+  const settingsModal = document.getElementById('settings-modal');
+  const closeModalBtn = document.querySelector('.close-modal-btn');
+  const settingsModalBody = document.querySelector('.settings-modal-body');
+
+  const mobileTabs = document.querySelectorAll('.mobile-tab-button');
+  const sections = {
+    'meditation': document.getElementById('meditation-section'),
+    'pomodoro': document.getElementById('pomodoro-section'),
+    'tasks': document.getElementById('tasks-section'),
+    'stats': document.getElementById('stats-section')
+  };
+  
+  const controls = {
+    'meditation': document.getElementById('meditation-controls-mobile'),
+    'pomodoro': document.getElementById('pomodoro-controls-mobile'),
+    'tasks': document.getElementById('tasks-controls-mobile'),
+    'stats': document.getElementById('stats-controls-mobile')
+  };
+
+  mobileTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const tabName = tab.getAttribute('data-tab');
+      
+      mobileTabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      
+      Object.values(sections).forEach(section => {
+        if(section) section.classList.add('hidden');
+      });
+      Object.values(controls).forEach(control => {
+        if(control) control.classList.add('hidden');
+      });
+      
+      if (sections[tabName]) sections[tabName].classList.remove('hidden');
+      if (controls[tabName]) controls[tabName].classList.remove('hidden');
+
+      const desktopTab = document.querySelector(`.tab-button[data-tab="${tabName}"]`);
+      if(desktopTab) {
+        desktopTab.click();
+      }
+    });
+  });
+
+  function syncButtonStates() {
+    const buttonPairs = [
+      ['start-meditation-btn-mobile', 'start-meditation-btn'],
+      ['reset-meditation-btn-mobile', 'reset-meditation-btn'],
+      ['pomodoro-start-btn-mobile', 'pomodoro-start-btn'],
+      ['pomodoro-reset-btn-mobile', 'pomodoro-reset-btn']
+    ];
+
+    buttonPairs.forEach(([mobileId, desktopId]) => {
+      const mobileBtn = document.getElementById(mobileId);
+      const desktopBtn = document.getElementById(desktopId);
+      
+      if (mobileBtn && desktopBtn) {
+        mobileBtn.textContent = desktopBtn.textContent;
+        
+        mobileBtn.addEventListener('click', () => {
+          desktopBtn.click();
+          setTimeout(() => {
+            mobileBtn.textContent = desktopBtn.textContent;
+          }, 50);
+        });
+
+        new MutationObserver(() => {
+          mobileBtn.textContent = desktopBtn.textContent;
+        }).observe(desktopBtn, {
+          childList: true,
+          characterData: true,
+          subtree: true
+        });
+      }
+    });
+  }
+
+  const originalHandleSettingsClone = handleSettingsClone;
+  handleSettingsClone = function(settingsClone) {
+    const taskSettingsSection = settingsClone.querySelector('.setting-group:has(#task-text)');
+    if (taskSettingsSection) {
+      taskSettingsSection.remove();
+    }
+    const taskColorSection = settingsClone.querySelector('.color-palette');
+    if (taskColorSection) {
+      taskColorSection.parentElement.remove();
+    }
+    const addTaskButton = settingsClone.querySelector('#add-task-btn');
+    if (addTaskButton) {
+      addTaskButton.remove();
+    }
+    originalHandleSettingsClone(settingsClone);
+  };
+
+  function handleSettingsClone(settingsClone) {
+    settingsClone.querySelectorAll('input[type="range"]').forEach(slider => {
+      const originalSlider = document.querySelector(`#${slider.id}`);
+      if (originalSlider) {
+        slider.value = originalSlider.value;
+        slider.nextElementSibling.textContent = slider.value;
+        
+        slider.addEventListener('input', () => {
+          originalSlider.value = slider.value;
+          slider.nextElementSibling.textContent = slider.value;
+          
+          const event = new Event('input', {
+            bubbles: true,
+            cancelable: true,
+          });
+          originalSlider.dispatchEvent(event);
+
+          switch(slider.id) {
+            case 'inhale-time':
+              timeLeft = parseInt(slider.value) * 60;
+              break;
+            case 'hold-time':
+              timeLeft = parseInt(slider.value) * 60;
+              break;
+            case 'exhale-time':
+              timeLeft = parseInt(slider.value) * 60;
+              break;
+            case 'cycles-count':
+              currentCycle = 0;
+              break;
+            case 'work-duration':
+              if (!pomodoroRunning) {
+                timeLeft = parseInt(slider.value) * 60;
+                updatePomodoroDisplay();
+              }
+              break;
+            case 'short-break':
+            case 'long-break':
+            case 'sessions':
+              if (!pomodoroRunning) {
+                updatePomodoroDisplay();
+              }
+              break;
+          }
+        });
+      }
+    });
+
+    settingsClone.querySelectorAll('select').forEach(select => {
+      const originalSelect = document.querySelector(`#${select.id}`);
+      if (originalSelect) {
+        const savedValue = localStorage.getItem(select.id);
+        select.value = savedValue || originalSelect.value;
+        
+        select.addEventListener('change', () => {
+          originalSelect.value = select.value;
+          localStorage.setItem(select.id, select.value);
+          
+          const event = new Event('change', {
+            bubbles: true,
+            cancelable: true,
+          });
+          originalSelect.dispatchEvent(event);
+
+          switch(select.id) {
+            case 'background-sound':
+            case 'breathe-sound':
+              loadMeditationSounds();
+              break;
+            case 'pomodoro-background-sound':
+            case 'pomodoro-end-sound':
+              loadPomodoroSounds();
+              break;
+          }
+        });
+      }
+    });
+
+    settingsClone.querySelectorAll('.theme-btn').forEach(btn => {
+      if (btn.getAttribute('data-theme') === localStorage.getItem('appTheme')) {
+        btn.classList.add('active');
+      }
+      
+      btn.addEventListener('click', () => {
+        const theme = btn.getAttribute('data-theme');
+        settingsClone.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        document.querySelectorAll('.theme-btn').forEach(b => {
+          b.classList.toggle('active', b.getAttribute('data-theme') === theme);
+        });
+        
+        document.body.className = `theme-${theme}`;
+        localStorage.setItem('appTheme', theme);
+        updateThemeColor(theme);
+      });
+    });
+
+    settingsClone.querySelectorAll('.lang-btn').forEach(btn => {
+      if (btn.getAttribute('data-lang') === currentLang) {
+        btn.classList.add('active');
+      }
+      
+      btn.addEventListener('click', () => {
+        const lang = btn.getAttribute('data-lang');
+        
+        settingsClone.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        document.querySelectorAll('.lang-btn').forEach(b => {
+          b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+        });
+        
+        handleLanguageChange(lang);
+      });
+    });
+
+    const clearAllBtn = settingsClone.querySelector('#clear-all-tasks-btn');
+    const clearCompletedBtn = settingsClone.querySelector('#clear-completed-tasks-btn');
+    const undoTaskBtn = settingsClone.querySelector('#undo-btn');
+
+    if (clearAllBtn) {
+      clearAllBtn.addEventListener('click', () => {
+        pushUndoState();
+        tasks = [];
+        saveTasks();
+        renderTasks();
+        closeSettingsModal();
+      });
+    }
+
+    if (clearCompletedBtn) {
+      clearCompletedBtn.addEventListener('click', () => {
+        pushUndoState();
+        tasks = tasks.filter(t => !t.completed);
+        saveTasks();
+        renderTasks();
+        closeSettingsModal();
+      });
+    }
+
+    if (undoTaskBtn) {
+      undoTaskBtn.addEventListener('click', () => {
+        undo();
+        closeSettingsModal();
+      });
+    }
+
+    const addTaskBtn = settingsClone.querySelector('#add-task-btn');
+    const taskInput = settingsClone.querySelector('#task-text');
+    const colorPalette = settingsClone.querySelector('#task-color-palette');
+    
+    if (addTaskBtn && taskInput) {
+      addTaskBtn.addEventListener('click', () => {
+        if (taskInput.value.trim() !== '') {
+          const selectedColor = colorPalette.querySelector('.color-dot.selected')?.getAttribute('data-color') || '#FFE0B2';
+          
+          const task = {
+            id: Date.now(),
+            text: taskInput.value,
+            completed: false,
+            color: selectedColor
+          };
+          
+          tasks.push(task);
+          saveTasks();
+          renderTasks();
+          
+          taskInput.value = '';
+        }
+      });
+
+      colorPalette.querySelectorAll('.color-dot').forEach(dot => {
+        dot.addEventListener('click', () => {
+          colorPalette.querySelectorAll('.color-dot').forEach(d => d.classList.remove('selected'));
+          dot.classList.add('selected');
+        });
+      });
+    }
+
+    const resetStatsBtn = settingsClone.querySelector('#reset-stats-btn');
+    if (resetStatsBtn) {
+      resetStatsBtn.addEventListener('click', () => {
+        localStorage.removeItem('appStats');
+        updateStatsDisplay();
+      });
+    }
+  }
+
+  const settingsButtons = document.querySelectorAll('[id$="-settings-toggle"]');
+  settingsButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const controlsContainer = btn.closest('.controls-mobile');
+      if (!controlsContainer) return;
+      
+      const tab = controlsContainer.id.replace('-controls-mobile', '');
+      const currentSettings = document.querySelector(`#${tab}-settings`);
+      
+      if (currentSettings) {
+        const settingsClone = currentSettings.cloneNode(true);
+        settingsModalBody.innerHTML = '';
+        settingsModalBody.appendChild(settingsClone);
+        
+        handleSettingsClone(settingsClone);
+        
+        settingsModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  });
+
+  function closeSettingsModal() {
+    const settingsModal = document.getElementById('settings-modal');
+    if (!settingsModal) return;
+    
+    const settingsClone = settingsModal.querySelector('.settings-modal-body > *');
+    if (settingsClone) {
+      settingsClone.querySelectorAll('select').forEach(select => {
+        const originalSelect = document.querySelector(`#${select.id}`);
+        if (originalSelect) {
+          originalSelect.value = select.value;
+          localStorage.setItem(select.id, select.value);
+          
+          if (select.id.includes('sound')) {
+            if (select.id.includes('pomodoro')) {
+              loadPomodoroSounds();
+            } else {
+              loadMeditationSounds();
+            }
+          }
+        }
+      });
+
+      settingsClone.querySelectorAll('input[type="range"]').forEach(slider => {
+        const originalSlider = document.querySelector(`#${slider.id}`);
+        if (originalSlider) {
+          originalSlider.value = slider.value;
+          
+          switch(slider.id) {
+            case 'inhale-time':
+              inhaleValue.textContent = slider.value;
+              break;
+            case 'hold-time':
+              holdValue.textContent = slider.value;
+              break;
+            case 'exhale-time':
+              exhaleValue.textContent = slider.value;
+              break;
+            case 'cycles-count':
+              cyclesValue.textContent = slider.value;
+              break;
+            case 'work-duration':
+              workValue.textContent = slider.value;
+              if (!pomodoroRunning) {
+                timeLeft = parseInt(slider.value) * 60;
+                updatePomodoroDisplay();
+              }
+              break;
+            case 'short-break':
+              shortBreakValue.textContent = slider.value;
+              break;
+            case 'long-break':
+              longBreakValue.textContent = slider.value;
+              break;
+            case 'sessions':
+              sessionsValue.textContent = slider.value;
+              break;
+          }
+
+          localStorage.setItem(slider.id, slider.value);
+
+          const event = new Event('input', { bubbles: true });
+          originalSlider.dispatchEvent(event);
+        }
+      });
+
+      if (settingsClone.id === 'meditation-settings') {
+        if (!medIsRunning) {
+          currentCycle = 0;
+          isPreparing = false;
+          phaseText.textContent = getTranslation('prepare');
+          breatheCircle.style.transform = 'scale(1)';
+        }
+      }
+    }
+
+    settingsModal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  if (closeModalBtn) {
+    closeModalBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      closeSettingsModal();
+    });
+  }
+
+  if (settingsModal) {
+    settingsModal.addEventListener('click', (e) => {
+      if (e.target === settingsModal) {
+        closeSettingsModal();
+      }
+    });
+  }
+
+  const modalContent = document.querySelector('.settings-modal-content');
+  if (modalContent) {
+    modalContent.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+  }
+
+  syncButtonStates();
+
+  const tasksControlsMobile = document.getElementById('tasks-controls-mobile');
+  if (tasksControlsMobile) {
+    tasksControlsMobile.innerHTML = `
+      <button id="tasks-settings-toggle" class="btn settings-btn">
+        <i class="fas fa-cog"></i>
+      </button>
+      <button id="add-task-btn-mobile" class="btn">
+        <i class="fas fa-plus"></i>
+        ${getTranslation('addTaskBtn')}
+      </button>
+    `;
+
+    const settingsBtn = tasksControlsMobile.querySelector('#tasks-settings-toggle');
+    settingsBtn.addEventListener('click', () => {
+      const modalContent = `
+        <div class="settings">
+          <h2 data-i18n="manageTasks">${getTranslation('manageTasks')}</h2>
+          <div class="tasks-manage">
+            <button id="clear-all-tasks-btn" class="btn btn-block" data-i18n="clearAllTasks">${getTranslation('clearAllTasks')}</button>
+            <button id="clear-completed-tasks-btn" class="btn btn-block" data-i18n="clearCompletedTasks">${getTranslation('clearCompletedTasks')}</button>
+            <button id="undo-btn" class="btn btn-block" data-i18n="undoLastAction">${getTranslation('undoLastAction')}</button>
+          </div>
+        </div>
+      `;
+      settingsModalBody.innerHTML = modalContent;
+      settingsModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+
+      const clearAllBtn = settingsModalBody.querySelector('#clear-all-tasks-btn');
+      const clearCompletedBtn = settingsModalBody.querySelector('#clear-completed-tasks-btn');
+      const undoTaskBtn = settingsModalBody.querySelector('#undo-btn');
+
+      if (clearAllBtn) {
+        clearAllBtn.addEventListener('click', () => {
+          pushUndoState();
+          tasks = [];
+          saveTasks();
+          renderTasks();
+          closeSettingsModal();
+        });
+      }
+
+      if (clearCompletedBtn) {
+        clearCompletedBtn.addEventListener('click', () => {
+          pushUndoState();
+          tasks = tasks.filter(t => !t.completed);
+          saveTasks();
+          renderTasks();
+          closeSettingsModal();
+        });
+      }
+
+      if (undoTaskBtn) {
+        undoTaskBtn.addEventListener('click', () => {
+          undo();
+          closeSettingsModal();
+        });
+      }
+    });
+
+    const addTaskBtnMobile = tasksControlsMobile.querySelector('#add-task-btn-mobile');
+    addTaskBtnMobile.addEventListener('click', () => {
+      const modalContent = `
+        <div class="settings">
+          <h2 data-i18n="createNewTask">${getTranslation('createNewTask')}</h2>
+          <div class="setting-group">
+            <input type="text" id="task-text-modal" placeholder="${getTranslation('taskPlaceholder')}" />
+          </div>
+          <label data-i18n="colorLabel">${getTranslation('colorLabel')}</label>
+          <div class="color-palette" id="task-color-palette-modal">
+            <div class="color-dot selected" data-color="#FFE0B2" style="background-color: #FFE0B2;"></div>
+            <div class="color-dot" data-color="#C8E6C9" style="background-color: #C8E6C9;"></div>
+            <div class="color-dot" data-color="#BBDEFB" style="background-color: #BBDEFB;"></div>
+            <div class="color-dot" data-color="#E1BEE7" style="background-color: #E1BEE7;"></div>
+            <div class="color-dot" data-color="#FFCCBC" style="background-color: #FFCCBC;"></div>
+            <div class="color-dot" data-color="#D7CCC8" style="background-color: #D7CCC8;"></div>
+          </div>
+          <button id="add-task-modal-btn" class="btn" data-i18n="addTaskBtn">${getTranslation('addTaskBtn')}</button>
+        </div>
+      `;
+      settingsModalBody.innerHTML = modalContent;
+      settingsModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+
+      const colorPalette = settingsModalBody.querySelector('#task-color-palette-modal');
+      let selectedColor = '#FFE0B2';
+      colorPalette.querySelectorAll('.color-dot').forEach(dot => {
+        dot.addEventListener('click', () => {
+          colorPalette.querySelectorAll('.color-dot').forEach(d => d.classList.remove('selected'));
+          dot.classList.add('selected');
+          selectedColor = dot.getAttribute('data-color');
+        });
+      });
+
+      const addTaskModalBtn = settingsModalBody.querySelector('#add-task-modal-btn');
+      const taskInput = settingsModalBody.querySelector('#task-text-modal');
+      
+      addTaskModalBtn.addEventListener('click', () => {
+        const text = taskInput.value.trim();
+        if (text) {
+          pushUndoState();
+          tasks.push({
+            id: Date.now(),
+            text,
+            color: selectedColor,
+            completed: false,
+            completedDate: null,
+          });
+          saveTasks();
+          renderTasks();
+          closeSettingsModal();
+        }
+      });
+
+      taskInput.focus();
+    });
+  }
+
+  const statsControlsMobile = document.getElementById('stats-controls-mobile');
+  if (statsControlsMobile) {
+    statsControlsMobile.innerHTML = `
+      <button id="stats-settings-toggle" class="btn settings-btn-large">
+        <i class="fas fa-cog"></i>
+        <span data-i18n="appSettings">${getTranslation('appSettings')}</span>
+      </button>
+    `;
+
+    const settingsBtn = statsControlsMobile.querySelector('#stats-settings-toggle');
+    settingsBtn.addEventListener('click', () => {
+      const currentSettings = document.querySelector('#stats-settings');
+      if (currentSettings) {
+        const settingsClone = currentSettings.cloneNode(true);
+        settingsModalBody.innerHTML = '';
+        settingsModalBody.appendChild(settingsClone);
+        
+        handleSettingsClone(settingsClone);
+        
+        settingsModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  init();
+  initMobileUI();
+});
+
+function updateSoundPreferences() {
+  const backgroundSound = document.getElementById('background-sound').value;
+  const breatheSound = document.getElementById('breathe-sound').value;
+  updateMeditationSounds(backgroundSound, breatheSound);
+
+  const pomodoroBackgroundSound = document.getElementById('pomodoro-background-sound').value;
+  const pomodoroEndSound = document.getElementById('pomodoro-end-sound').value;
+  updatePomodoroSounds(pomodoroBackgroundSound, pomodoroEndSound);
+}
+
+function loadSoundPreferences() {
+  const soundSelectors = [
+    'background-sound',
+    'breathe-sound',
+    'pomodoro-background-sound',
+    'pomodoro-end-sound'
+  ];
+
+  soundSelectors.forEach(id => {
+    const savedValue = localStorage.getItem(id);
+    const selector = document.getElementById(id);
+    if (savedValue && selector) {
+      selector.value = savedValue;
+      const event = new Event('change');
+      selector.dispatchEvent(event);
+    }
+  });
+}
+
+function handleLanguageChange(lang) {
+  currentLang = lang;
+  localStorage.setItem('appLang', lang);
+  
+  document.querySelectorAll('[data-i18n]').forEach(element => {
+    const key = element.getAttribute('data-i18n');
+    if (translations[currentLang] && translations[currentLang][key]) {
+      element.textContent = translations[currentLang][key];
+    }
+  });
+
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+    const key = element.getAttribute('data-i18n-placeholder');
+    if (translations[currentLang] && translations[currentLang][key]) {
+      element.placeholder = translations[currentLang][key];
+    }
+  });
+
+  document.querySelectorAll('[data-i18n-title]').forEach(element => {
+    const key = element.getAttribute('data-i18n-title');
+    if (translations[currentLang] && translations[currentLang][key]) {
+      element.title = translations[currentLang][key];
+    }
+  });
+
+  const addTaskBtnMobile = document.getElementById('add-task-btn-mobile');
+  if (addTaskBtnMobile) {
+    addTaskBtnMobile.innerHTML = `
+      <i class="fas fa-plus"></i>
+      ${translations[currentLang]['addTaskBtn']}
+    `;
+  }
+}
+
+function loadMeditationPreferences() {
+  const meditationParams = [
+    'inhale-time',
+    'hold-time',
+    'exhale-time',
+    'cycles-count'
+  ];
+
+  meditationParams.forEach(id => {
+    const savedValue = localStorage.getItem(id);
+    const slider = document.getElementById(id);
+    if (savedValue && slider) {
+      slider.value = savedValue;
+      const valueDisplay = document.getElementById(`${id.replace('-time', '')}-value`);
+      if (valueDisplay) {
+        valueDisplay.textContent = savedValue;
+      }
+    }
+  });
+}
+
+function loadPomodoroPreferences() {
+  const pomodoroParams = [
+    'work-duration',
+    'short-break',
+    'long-break',
+    'sessions'
+  ];
+
+  pomodoroParams.forEach(id => {
+    const savedValue = localStorage.getItem(id);
+    const slider = document.getElementById(id);
+    if (savedValue && slider) {
+      slider.value = savedValue;
+      const valueDisplay = document.getElementById(`${id}-value`);
+      if (valueDisplay) {
+        valueDisplay.textContent = savedValue;
+      }
+    }
+  });
+
+  const savedWorkDuration = localStorage.getItem('work-duration');
+  if (savedWorkDuration) {
+    timeLeft = parseInt(savedWorkDuration) * 60;
+    updatePomodoroDisplay();
+  }
+}

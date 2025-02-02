@@ -16,6 +16,7 @@
 ✔️ Multi-language support 🌎 (English, French, Spanish, German)  
 ✔️ Ambient sounds & notifications 🔔  
 ✔️ Local storage for preferences and statistics 📊  
+✔️ Smooth and responsive mobile UX
 
 ---
 
